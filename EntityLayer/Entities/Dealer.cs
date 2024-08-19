@@ -10,7 +10,6 @@ namespace EntityLayer.Entities
 	{
 		public int DealerId { get; set; }
 		public string DealerName { get; set; }
-
 		public string Authorized{ get; set; }
         public string Location{ get; set; }
 		public string Phone { get; set; }
