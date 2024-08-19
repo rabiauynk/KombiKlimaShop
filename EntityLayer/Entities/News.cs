@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace EntityLayer.Entities
 		public DateTime NewDate { get; set; }
 		public string NewDetail { get; set; }
 		public int NewCount { get; set; }
-       
+        public int MyProperty { get; set; }
+
     }
 }
