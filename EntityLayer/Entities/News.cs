@@ -16,6 +16,8 @@ namespace EntityLayer.Entities
 		public DateTime NewDate { get; set; }
 		public string NewDetail { get; set; }
 		public int NewCount { get; set; }
+
+		public int MyProperty { get; set; }
        
     }
 }
