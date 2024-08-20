@@ -42,5 +42,6 @@ namespace BusinessLayer.Concrete
 		{
 			_videoDal.Update(entity);
 		}
+
 	}
 }
