@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DtoLayer.DealerDto
 {
-	public class ReturnDealerDto
+	public class ResultDealerDto
 	{
-		public int DealerId { get; set; }
+		public int DealerID { get; set; }
 		public string DealerName { get; set; }
 		public string Authorized { get; set; }
 		public string Location { get; set; }

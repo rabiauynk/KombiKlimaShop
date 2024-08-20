@@ -14,6 +14,6 @@ namespace DtoLayer.NewsDto
 		public string ImageUrl { get; set; }
 		public DateTime NewDate { get; set; }
 		public string NewDetail { get; set; }
-		public int NewCount { get; set; }
+		
 	}
 }

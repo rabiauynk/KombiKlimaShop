@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace DtoLayer.CampaignDto
 {
-	public class ResultNewsDto
+	public class CreateCampaignDto
 	{
-		public int NewsID { get; set; }
-		public string NewTitle { get; set; }
+		public string CampaignTitle { get; set; }
 		public string Description { get; set; }
 		public string ImageUrl { get; set; }
-		public DateTime NewDate { get; set; }
-		public string NewDetail { get; set; }
-		public int NewCount { get; set; }
+		public string CampaignDetail { get; set; }
+
 	}
 }

@@ -8,7 +8,7 @@ namespace EntityLayer.Entities
 {
 	public class DealerCategory
 	{
-		public int DealerCategoryId { get; set; }
+		public int DealerCategoryID { get; set; }
 		public string CategoryName { get; set; }
 	}
 }

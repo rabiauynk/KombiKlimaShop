@@ -8,5 +8,7 @@ namespace DtoLayer.VideoDto
 {
 	public class UpdateVideoDto
 	{
+		public int VideoID { get; set; }
+		public string VideoUrl { get; set; }
 	}
 }
