@@ -33,8 +33,12 @@ namespace ShopApi.Controllers
 			_dealerService.TAdd(new ()
 			{
 				DealerName = createDealerDto.DealerName,
-				Authorized=createDealerDto.Authorized,
-				Location=createDealerDto.Location
+				DealerOwner=createDealerDto.DealerOwner,
+				DealerAddress=createDealerDto.DealerAddress,
+				DealerDistrict=createDealerDto.DealerDistrict,
+				DealerCity=createDealerDto.DealerCity,
+				Phone=createDealerDto.Phone,
+				ImageUrl=createDealerDto.ImageUrl
 
 			});
 			return Ok("Bayi Bilgisi Eklendi");
@@ -57,11 +61,14 @@ namespace ShopApi.Controllers
 		{
 			_dealerService.TUpdate(new Dealer()
 			{
-				DealerID=updateDealerDto.DealerID,
+				DealerID = updateDealerDto.DealerID,
 				DealerName=updateDealerDto.DealerName,
-				Authorized=updateDealerDto.Authorized,
-				Location=updateDealerDto.Location,
-				Phone=updateDealerDto.Phone
+				DealerOwner=updateDealerDto.DealerOwner,
+				DealerAddress=updateDealerDto.DealerAddress ,
+				DealerDistrict=updateDealerDto.DealerDistrict,
+				DealerCity=updateDealerDto.DealerCity,
+				Phone=updateDealerDto.Phone,
+				ImageUrl=updateDealerDto.ImageUrl
 			});
 			return Ok("Bayi Bilgisi Güncellendi");
 		}

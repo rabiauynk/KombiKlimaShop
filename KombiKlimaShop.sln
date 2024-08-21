@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{31F0E190-6D4F-43F8-B6DF-BFB9112A9B4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{31F0E190-6D4F-43F8-B6DF-BFB9112A9B4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopApi", "ShopApi\ShopApi.csproj", "{F205E609-CCB4-46E6-9EEC-6E0789DAE63E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopApi", "ShopApi\ShopApi.csproj", "{F205E609-CCB4-46E6-9EEC-6E0789DAE63E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopWebUI", "ShopWebUI\ShopWebUI.csproj", "{43AA10B2-7624-4226-8E6E-A92111ABDAEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopWebUI", "ShopWebUI\ShopWebUI.csproj", "{43AA10B2-7624-4226-8E6E-A92111ABDAEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{AD0D07A5-9BCA-48B5-A1C6-BAFDEF2E4534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{AD0D07A5-9BCA-48B5-A1C6-BAFDEF2E4534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtoLayer", "DtoLayer\DtoLayer.csproj", "{DA0DC14E-3E7B-4EC7-AEF3-C16B6F8A0B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DtoLayer", "DtoLayer\DtoLayer.csproj", "{DA0DC14E-3E7B-4EC7-AEF3-C16B6F8A0B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{1863E5E1-C610-4E82-88A1-41109A0580D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{1863E5E1-C610-4E82-88A1-41109A0580D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

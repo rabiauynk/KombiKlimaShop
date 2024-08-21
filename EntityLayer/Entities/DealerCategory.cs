@@ -10,5 +10,6 @@ namespace EntityLayer.Entities
 	{
 		public int DealerCategoryID { get; set; }
 		public string CategoryName { get; set; }
+		public List<Dealer> Dealers { get; set; }
 	}
 }
