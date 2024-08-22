@@ -2,7 +2,7 @@
 
 namespace ShopWebUI.ViewComponents.LayoutComponents
 {
-	public class _LayoutHeaderPartialComponent:ViewComponent
+	public class _LayoutNavbarComponentPartial:ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{
@@ -10,3 +10,4 @@ namespace ShopWebUI.ViewComponents.LayoutComponents
 		}
 	}
 }
+
