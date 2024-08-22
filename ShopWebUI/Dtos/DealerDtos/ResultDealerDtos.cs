@@ -1,4 +1,4 @@
-namespace SignalRWebUI.Dtos.DealerDtos {
+namespace ShopWebUI.Dtos.DealerDtos {
     public class ResultDealerDto {
         public int DealerID { get; set; }
 		public string DealerName { get; set; }

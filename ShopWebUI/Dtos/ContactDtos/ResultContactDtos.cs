@@ -1,4 +1,4 @@
-namespace SignalRWebUI.Dtos.ContactDtos {
+namespace ShopWebUI.Dtos.ContactDtos {
     public class ResultContactDto {
         
         public int ContactID { get; set; }

@@ -1,4 +1,4 @@
-namespace SignalRWebUI.Dtos.CampaignDtos{
+namespace ShopWebUI.Dtos.CampaignDtos{
     public class ResultCampaignDto {
         public int CampaignID { get; set; }
 		public string CampaignTitle { get; set; }
