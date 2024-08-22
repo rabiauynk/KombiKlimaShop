@@ -22,7 +22,7 @@ namespace ShopWebUI.Controllers
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();
 				var values=JsonConvert.DeserializeObject<List<ResultDealerCategoryDto>>(jsonData);
 				return View(values);
-			}
+			} 
 			return View();
 		}
 	}
