@@ -20,10 +20,16 @@ namespace ShopWebUI.Controllers
 			if (responseMessage.IsSuccessStatusCode)
 			{
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();
-				var values=JsonConvert.DeserializeObject<List<ResultDealerCategoryDto>>(jsonData);
+				var values = JsonConvert.DeserializeObject<List<ResultDealerCategoryDto>>(jsonData);
 				return View(values);
-			} 
+			}
 			return View();
 		}
-	}
+		[HttpGet]
+		public IActionResult CreateCategory()
+		{
+			return View();
+		}
+		[HttpPost]
+		public async  Task<IActionResult> CreateCategory() {
 }
