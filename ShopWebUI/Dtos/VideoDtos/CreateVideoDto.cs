@@ -1,6 +1,6 @@
 namespace ShopWebUI.Dtos.VideoDtos
 {
-	public class GetVideoDto
+	public class CreateVideoDto
 	{
 		
 		public string VideoUrl { get; set; }

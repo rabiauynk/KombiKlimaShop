@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
 			return _dealerDal.GetByID(id);
 		}
 
+		public List<Dealer> TGetDealersWithCategories()
+		{
+			return _dealerDal.GetDealersWithCategories();
+		}
+
 		public List<Dealer> TGetListAll()
 		{
 			return _dealerDal.GetListAll();

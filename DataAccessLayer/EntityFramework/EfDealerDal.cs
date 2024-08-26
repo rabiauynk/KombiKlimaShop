@@ -2,6 +2,7 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Repositories;
 using EntityLayer.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,13 @@ namespace DataAccessLayer.EntityFramework
 	{
 		public EfDealerDal(ShopContext context) : base(context)
 		{
+		}
+
+		public List<Dealer> GetDealersWithCategories()
+		{
+			var context=new ShopContext();
+			var values=context.Dealers.Include(x=>x.DealerCategory).ToList();
+			return values;
 		}
 	}
 }

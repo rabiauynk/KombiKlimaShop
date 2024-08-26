@@ -9,6 +9,6 @@ namespace DataAccessLayer.Abstract
 {
 	public interface IDealerDal:IGenericDal<Dealer>
 	{
-
+		List<Dealer> GetDealersWithCategories();
 	}
 }

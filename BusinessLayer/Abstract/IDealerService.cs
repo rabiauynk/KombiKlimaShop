@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
 	public interface IDealerService:IGenericService<Dealer>
 	{
+		List<Dealer> TGetDealersWithCategories();
 	}
 }

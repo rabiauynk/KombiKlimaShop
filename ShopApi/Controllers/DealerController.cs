@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using BusinessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using DtoLayer.ContactDto;
 using DtoLayer.DealerDto;
 using EntityLayer.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShopApi.Controllers
 {
@@ -27,30 +29,61 @@ namespace ShopApi.Controllers
 			var value = _mapper.Map<List<ResultDealerDto>>(_dealerService.TGetListAll());
 			return Ok(value);
 		}
-		[HttpPost]
-		public IActionResult CreateDealer(CreateDealerDto createDealerDto)
+		[HttpGet("DealerListWithCategory")]
+		public IActionResult DealerListWithCategory()
 		{
-			_dealerService.TAdd(new ()
+			var context=new ShopContext();
+			var values = context.Dealers.Include(x => x.DealerCategory).Select(y => new ResultDealerWithCategory
 			{
-				DealerName = createDealerDto.DealerName,
-				DealerOwner=createDealerDto.DealerOwner,
-				DealerAddress=createDealerDto.DealerAddress,
-				DealerDistrict=createDealerDto.DealerDistrict,
-				DealerCity=createDealerDto.DealerCity,
-				Phone=createDealerDto.Phone,
-				ImageUrl=createDealerDto.ImageUrl
+				DealerID=y.DealerID,
+				DealerName = y.DealerName,
+				DealerAddress = y.DealerAddress,
+				DealerOwner = y.DealerOwner,
+				DealerCity = y.DealerCity,
+				CategoryName = y.DealerCategory.CategoryName,
+				DealerDistrict = y.DealerDistrict,
+				ImageUrl = y.ImageUrl,
+				Phone = y.Phone,
+
+
 
 			});
-			return Ok("Bayi Bilgisi Eklendi");
+			return Ok(values.ToList());
+	
 		}
-		[HttpDelete]
+
+        [HttpPost]
+        public IActionResult CreateDealer(CreateDealerDto createDealerDto)
+        {
+            try
+            {
+                _dealerService.TAdd(new Dealer
+                {
+                    DealerName = createDealerDto.DealerName,
+                    DealerOwner = createDealerDto.DealerOwner,
+                    DealerAddress = createDealerDto.DealerAddress,
+                    DealerDistrict = createDealerDto.DealerDistrict,
+                    DealerCity = createDealerDto.DealerCity,
+                    Phone = createDealerDto.Phone,
+                    ImageUrl = createDealerDto.ImageUrl,
+                    DealerCategoryID = createDealerDto.DealerCategoryID
+                });
+                return Ok("Firma Bilgisi Eklendi");
+            }
+            catch (Exception ex)
+            {
+                // Hata loglama ve kullanıcıya bilgi verme
+                return StatusCode(StatusCodes.Status500InternalServerError, $"İşlem başarısız: {ex.Message}");
+            }
+        }
+        [HttpDelete("{id}")]
 		public IActionResult DeleteDealer(int id)
 		{
 			var value = _dealerService.TGetByID(id);
 			_dealerService.TDelete(value);
-			return Ok("Bayi Bilgisi Silindi ");
+			return Ok("Firma Bilgisi Silindi ");
 		}
-		[HttpGet("GetDealer")]
+		[HttpGet("{id}")]
 		public IActionResult GetDealer(int id)
 		{
 			var value = _dealerService.TGetByID(id);
@@ -68,9 +101,11 @@ namespace ShopApi.Controllers
 				DealerDistrict=updateDealerDto.DealerDistrict,
 				DealerCity=updateDealerDto.DealerCity,
 				Phone=updateDealerDto.Phone,
-				ImageUrl=updateDealerDto.ImageUrl
+				ImageUrl=updateDealerDto.ImageUrl,
+				DealerCategoryID=updateDealerDto.DealerCategoryID
+
 			});
-			return Ok("Bayi Bilgisi Güncellendi");
+			return Ok("Firma Bilgisi Güncellendi");
 		}
 
 

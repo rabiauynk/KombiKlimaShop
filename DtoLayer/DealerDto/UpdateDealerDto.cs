@@ -16,6 +16,7 @@ namespace DtoLayer.DealerDto
 		public string DealerCity { get; set; }
 		public string Phone { get; set; }
 		public string ImageUrl { get; set; }
+        public int DealerCategoryID { get; set; }
 
-	}
+    }
 }

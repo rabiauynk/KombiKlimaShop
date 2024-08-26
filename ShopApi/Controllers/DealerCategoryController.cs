@@ -34,20 +34,20 @@ namespace ShopApi.Controllers
 			});
 			return Ok("Kategori Eklendi");
 		}
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public IActionResult DeleteDealerCategory(int id)
 		{
 			var value = _dealerCategoryService.TGetByID(id);
 			_dealerCategoryService.TDelete(value);
 			return Ok("Kategori Silindi");
 		}
-		[HttpGet("GetDealerCatageroy")]
+		[HttpGet("{id}")]
 		public IActionResult GetDealerCategory(int id)
 		{
 			var value = _dealerCategoryService.TGetByID(id);
 			return Ok(value);
 		}
-		[HttpPut]
+		[HttpPut()]
 		public IActionResult UpdateDealerCategory(UpdateDealerCategoryDto updateDealerCategoryDto)
 		{
 			_dealerCategoryService.TUpdate(new DealerCategory()

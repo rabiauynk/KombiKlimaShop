@@ -6,22 +6,22 @@
 
 <div class="content">
 	<div class="container-fluid">
-		<h4 class="page-title">Bayi Kategori İşlemleri</h4>
+		<h4 class="page-title">Firma Kategori İşlemleri</h4>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<div class="card-title">Bayi Kategori Listesi</div>
+						<div class="card-title">Firma Kategori Listesi</div>
 					</div>
 					<div class="card-body">
 						<div class="card-sub">
-							 Bayi Kategori ile ilgili işlemleri aşağıdan gerçekleştirebilirsiniz.
+							 Firma Kategori ile ilgili işlemleri aşağıdan gerçekleştirebilirsiniz.
 						</div>
 						<table class="table mt-3">
 							<thead>
 								<tr>
 									<th scope="col">#</th>
-									<th scope="col">Bayi Kategori Adı</th>
+									<th scope="col">Firma Kategori Adı</th>
 									<th scope="col">Sil</th>
 									<th scope="col">Güncelle</th>
 								</tr>
@@ -32,8 +32,8 @@
 									<tr>
 										<td>@item.DealerCategoryID</td>
 										<td>@item.CategoryName</td>
-										<td><a href="#" class="btn btn-outline-danger">Sil</a></td>
-										<td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+										<td><a href="/DealerCategory/DeleteDealerCategory/@item.DealerCategoryID" class="btn btn-outline-danger">Sil</a></td>
+										<td><a href="/DealerCategory/UpdateDealerCategory/@item.DealerCategoryID" class="btn btn-outline-success">Güncelle</a></td>
 									
 									</tr>
 								}
@@ -41,7 +41,7 @@
 								
 							</tbody>
 						</table>
-						<a href="#" class="btn btn-outline-primary">Yeni Bayi Kategori Girişi</a>
+						<a href="/DealerCategory/CreateDealerCategory/" class="btn btn-outline-primary">Yeni Firma Kategori Girişi</a>
 					</div>
 				</div>
 

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DtoLayer.DealerDto
 {
-	public class ResultDealerDto
-	{
+    public class ResultDealerWithCategory
+    {
 		public int DealerID { get; set; }
 		public string DealerName { get; set; }
 		public string DealerOwner { get; set; }
@@ -16,6 +16,6 @@ namespace DtoLayer.DealerDto
 		public string DealerCity { get; set; }
 		public string Phone { get; set; }
 		public string ImageUrl { get; set; }
-       
-    }
+		public string CategoryName { get; set; }
+	}
 }
