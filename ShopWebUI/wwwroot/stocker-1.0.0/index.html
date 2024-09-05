@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kombi Klima Shop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the dropdown menu */
+        .navbar-nav .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            margin-left: 0.1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <a href="#" class="text-muted small me-4"><i
+                            class="fas fa-map-marker-alt text-primary me-2"></i>Haritada Göster</a>
+                    <a href="mailto:info@kombiklimashop.com" class="text-muted small me-4"><i
+                            class="fas fa-envelope text-primary me-2"></i>info@kombiklimashop.com</a>
+                    <a href="tel:+0216 611 99 11" class="text-muted small me-4"><i
+                            class="fas fa-phone-alt text-primary me-2"></i>0216 611 99 11</a>
+                    <a href="tel:+444 19 87" class="text-muted small me-4"><i
+                            class="fas fa-phone-alt text-primary me-2"></i>444 19 87</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Üye
+                            Ol</small></a>
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Üye
+                            Girişi</small></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="img/logo-header.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto py-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Anasayfa</a>
+                    </li>
+                    <!-- Dropdown Menu for Kurumsal -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Kurumsal</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Hakkımızda </a>
+                                <ul class="dropdown-menu"
+                                    style="display: none; position: absolute; left: 100%; top: 0; margin-left: 0.1rem;">
+                                    <li><a class="dropdown-item" href="whoarewe.html">Biz Kimiz?</a></li>
+                                    <li><a class="dropdown-item" href="purchase.html">Satınalmanızı Yapıyoruz</a></li>
+                                    <li><a class="dropdown-item" href="collection.html">7/24 Tahsilat</a></li>
+                                    <li><a class="dropdown-item" href="profit.html">Karlılığınızı Arttırıyoruz</a></li>
+                                    <li><a class="dropdown-item" href="sales.html">Satış Potansiyeli</a></li>
+                                    <li><a class="dropdown-item" href="mobileapp.html">Mobil Uygulama</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="history.html">Tarihçemiz</a></li>
+                            <li><a class="dropdown-item" href="founder.html">Kurucularımız</a></li>
+                            <li><a class="dropdown-item" href="vision.html">Vizyon & Misyonumuz</a></li>
+                            <li><a class="dropdown-item" href="reward.html">Sertifikalar & Ödüller</a></li>
+                            <li><a class="dropdown-item" href="video.html">Tanıtım Videoları</a></li>
+                            <li><a class="dropdown-item" href="https://www.belgemodul.com/sirket/1442">Bilgi Toplumu
+                                    Hizmetleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> <a href="contact.html" class="nav-link">İletişim</a> </li>
+                    <li class="nav-item"> <a href="new.html" class="nav-item nav-link">Haberler</a> </li>
+                    <li class="nav-item"> <a href="offer.html" class="nav-item nav-link">Kampanyalar</a></li>
+                    <li class="nav-item"> <a href="dealer.html" class="nav-item nav-link">Bayilerimiz</a></li>
+                    <li class="nav-item"> <a href="sss.html" class="nav-item nav-link">S.S.S.</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Ürünleri İncele</a>
+            </div>
+        </nav>
+
+        <!-- Carousel Start -->
+        <div class="header-carousel owl-carousel">
+            <div class="header-carousel-item">
+                <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row gy-0 gx-5">
+                            <div class="col-lg-0 col-xl-5"></div>
+                            <div class="col-xl-7 animated fadeInLeft">
+                                <div class="text-sm-center text-md-end">
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Kombi Klima Shop</h4>
+                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry's standard dummy...
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i
+                                                class="fas fa-play-circle me-2"></i>Video</a>
+                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Daha fazlası</a>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-center justify-content-md-end">
+                                        <h2 class="text-white me-2">Bizi Takip Edin:</h2>
+                                        <div class="d-flex justify-content-end ms-2">
+                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item">
+                <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-12 animated fadeInUp">
+                                <div class="text-center">
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Kombi Klima Shop</h4>
+                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry's standard dummy...
+                                    </p>
+                                    <div class="d-flex justify-content-center flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i
+                                                class="fas fa-play-circle me-2"></i> Watch Video</a>
+                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Daha
+                                            fazla..</a>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <h2 class="text-white me-2">Bizi Takip Edin:</h2>
+                                        <div class="d-flex justify-content-end ms-2">
+                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid p-5" style="background-color: #F8F8F8;">
+        <div class="container pb-5">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" style="text-align: center;" data-wow-delay="0.2s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-puzzle-piece fa-3x" style="color: red;"></i>
+                        </div>
+                        <h5>Satınalmanızı Yapıyoruz</h5>
+                        <p class="mb-4">Geniş Marka ve Ürün Bazında Stoklu Çalışıyor, Toplu İş Taleplerinizi Bile Anında
+                            Karşılıyoruz
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" style="text-align: center;" data-wow-delay="0.4s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-thumbs-up fa-3x "  style="color: red;"></i>
+                        </div>
+                        <h5>7/24 Tahsilat</h5>
+                        <p class="mb-4">Şifrelenmiş İşlemle Sanal Posumuzu Kullanarak Her An Her Yerde Güvenli Tahsilat
+                            Yapabilirsiniz
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" style="text-align: center;" data-wow-delay="0.6s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-calculator fa-3x"  style="color: red;"></i>
+                        </div>
+                        <h5>Kârlılıklarınızı Arttırıyoruz</h5>
+                        <p class="mb-4">Mobil Uygulamamızda Ve Web Sayfamızda Sizlere Her Gün Uygun Fiyatlı Fırsat
+                            Ürünler Sunuyoruz
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" style="text-align: center;" data-wow-delay="0.8s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-smile fa-3x"  style="color: red;"></i>
+                        </div>
+                        <h5>Satışlarınızı Arttırıyoruz</h5>
+                        <p class="mb-4">Alışık olduğunuz marka ve modeller yerine her marka ve modeli satabilme gücünü
+                            sizlere sunuyoruz
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid feature p-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-info">Tercih Sebepleri</h4>
+                <h1 class="display-5 mb-4"> Neden Tercih Ediliyoruz?</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-shopping-cart fa-3x text-info"></i>
+                        </div>
+                        <h5>Satınalmanızı Yapıyoruz</h5>
+                        <p class="mb-4">Geniş Marka ve Ürün Bazında Stoklu Çalışıyor, Toplu İş Taleplerinizi Bile Anında
+                            Karşılıyoruz
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Devamı...</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-globe fa-3x text-info"></i>
+                        </div>
+                        <h5>7/24 Tahsilat</h5>
+                        <p class="mb-4">Şifrelenmiş İşlemle Sanal Posumuzu Kullanarak Her An Her Yerde Güvenli Tahsilat
+                            Yapabilirsiniz
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Devamı...</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-wallet fa-3x text-info"></i>
+                        </div>
+                        <h5>Kârlılıklarınızı Arttırıyoruz</h5>
+                        <p class="mb-4">Mobil Uygulamamızda Ve Web Sayfamızda Sizlere Her Gün Uygun Fiyatlı Fırsat
+                            Ürünler Sunuyoruz
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Devamı...</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-tachometer-alt fa-3x text-info"></i>
+                        </div>
+                        <h5>Satışlarınızı Arttırıyoruz</h5>
+                        <p class="mb-4">Alışık olduğunuz marka ve modeller yerine her marka ve modeli satabilme gücünü
+                            sizlere sunuyoruz
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Devamı...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid "  style="padding: 60px; background-color: #F8F8F8;">
+        <div id="myCarousel" class="carousel slide carousel-fade px-lg-5" data-bs-ride="carousel"
+            data-bs-interval="2000" style="background-color: #F8F8F8;">
+            <div class="px-lg-5">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner ">
+                    <div class="carousel-item active">
+                        <img src="img/c1.jpg" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/c2.jpg" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/c3.jpg" class="d-block w-100" alt="Image 3">
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev mx-2" type="button" data-bs-target="#myCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next mx-2" type="button" data-bs-target="#myCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Kampanya Start -->
+    <div class="container-fluid blog p-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Fırsatı Yakalayın</h4>
+                <h1 class="display-5 mb-4">Kampanyalarımız</h1>
+            </div>
+            <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item p-3">
+                    <div class="blog-img mb-4">
+                        <img src="img/service-1.jpg" class="img-fluid w-100 rounded" alt="">
+                        <div class="blog-title">
+                            <a href="#" class="btn">Dividend Stocks</a>
+                        </div>
+                    </div>
+                    <a href="#" class="h4 d-inline-block mb-3">Options Trading Business?</a>
+                    <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore aut aliquam suscipit error corporis accusamus labore....
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" style="width: 60px; height: 60px;" alt="">
+                        <div class="ms-3">
+                            <h5>Admin</h5>
+                            <p class="mb-0">October 9, 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item p-3">
+                        <div class="blog-img">
+                            <img src="img/kam4.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-4">Bosch Isı Pompası Devreye Alımına 1 adet Bosch Klima Hediye</a>
+
+                            <p class="mb-4 fw-bold">Değerli İş Ortağımız,
+                            </p>
+                            <p>
+                                Bosch Isı Pompası Yaz Kampanyası : Her Bosch Isı Pompası devreye alımınıza 1 adet Bosch Klima - 12.000 Btu/h hediye. 
+
+ 
+
+                                Açıklama:
+                                
+                                9 Temmuz – 30 Eylül tarihleri arasındaki devreye alımlar geçerlidir.
+                            </p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Devamını Oku</a>
+                        </div>
+                </div>
+                <div class="blog-item p-3">
+                        <div class="blog-img">
+                            <img src="img/kam1.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-4"> KOMBİ KLİMA SHOP BOSCH PARTNER ÜYELERİ İLE BAKÜ’DE BULUŞTU</a>
+                            <p class="mb-4 fw-bold">Değerli İş Ortağımız,
+                            </p>
+                            <p>
+                                Bosch Isı Pompası Yaz Kampanyası : Her Bosch Isı Pompası devreye alımınıza 1 adet Bosch Klima - 12.000 Btu/h hediye. 
+
+ 
+
+                                Açıklama:
+                                
+                                9 Temmuz – 30 Eylül tarihleri arasındaki devreye alımlar geçerlidir.
+                            </p>
+                             <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Devamını Oku</a>
+                        </div>
+                </div>
+                <div class="blog-item p-3">
+                        <div class="blog-img">
+                            <img src="img/kam2.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-4"> Finans Kampanyaları Bülten</a>
+
+                            <p class="mb-4 fw-bold">Değerli İş Ortağımız,
+                            </p>
+                            <p>
+                                Bosch Isı Pompası Yaz Kampanyası : Her Bosch Isı Pompası devreye alımınıza 1 adet Bosch Klima - 12.000 Btu/h hediye. 
+
+ 
+
+                                Açıklama:
+                                
+                                9 Temmuz – 30 Eylül tarihleri arasındaki devreye alımlar geçerlidir.
+                            </p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Devamını Oku</a>
+                        </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <!-- Kampanya End -->
+
+    <div class="container-fluid service p-5" style="background-color: #F8F8F8;">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Basında Biz</h4>
+                <h1 class="display-5 mb-4">Haberler&Etkinlikler</h1>
+            </div>
+            
+            <div class="row g-4" style="min-height: 700px;">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/logo2.png" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-4"> Finans Kampanyaları Bülten</a>
+
+                            <p><i class="fas fa-clock" style="color: red; margin-right: 5px;"></i> 12.05.29 </p>
+                            <p class="mb-4 fw-bold">Kombi Klima Shop Bosch Partner Üyeleri “Bosch Kombi Seyahat Kampanyası” kapsamında Azerbaycan’ın başkenti Bakü’de unutulmaz 3 gece 4 gün geçirdi.
+                            </p>
+                            <p>
+                                Kombi Klima Shop 2012 yılından bu yana ısıtma ve soğutma sektöründe ihtiyaç duyulan tüm ürünleri sektördeki firmalarla buluşturan ulusal bir satış firmasıdır. 
+                            </p>
+                            <a class="text-primary" href="#">Devamını Oku...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/logo2.png" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-4"> KOMBİ KLİMA SHOP BOSCH PARTNER ÜYELERİ İLE BAKÜ’DE BULUŞTU</a>
+
+                            <p><i class="fas fa-clock" style="color: red; margin-right: 5px;"></i> 12.05.29 </p>
+                            <p class="mb-4 fw-bold">Kombi Klima Shop’tan Yaza Merhaba Kampanyaları Finansal Avantaj Paketi
+                            </p>
+                            <p>
+                                Kombi Klima Shop tarafından Bakü’ye 20 - 23 Haziran ve 27 - 30 Haziran 2024 tarihleri arasında iki grup olarak düzenlediği seyahatte firmalar 4 gün dolu dolu, keyifli zaman geçirdiler. Birinci grup eşli konsept dahilinde aileleri ile beraber tatil yapma fırsatı da buldu.                            </p>
+                            <a class="text-primary" href="#">Devamını Oku...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/logo2.png" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-4"> Finans Kampanyaları Bülten</a>
+
+                            <p><i class="fas fa-clock" style="color: red; margin-right: 5px;"></i> 12.05.29 </p>
+                            <p class="mb-4 fw-bold">Kombi Klima Shop’tan Yaza Merhaba Kampanyaları Finansal Avantaj Paketi
+                            </p>
+                            <p>
+                                Kombi Klima Shop 2012 yılından bu yana ısıtma ve soğutma sektöründe ihtiyaç duyulan tüm ürünleri sektördeki firmalarla buluşturan ulusal bir satış firmasıdır. 
+                            </p>
+                            <a class="text-primary" href="#">Devamını Oku...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mx-auto p-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <a class="btn btn-primary rounded-pill py-2 px-4 center" href="#"><i class="fas fa-eye m-2"></i>Tüm Haberleri görüntülemek için tıklayınız.</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobil-->
+    <div style="position: relative; width: 100%; height: 50vh;background: rgb(1,2,114);background: linear-gradient(90deg, rgba(1,2,114,1) 0%, rgba(189,2,40,1) 100%);">
+        <div style="position: absolute;width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: start; color: white; text-align: start; margin-left: 10rem;">
+            <h4 style="margin-bottom: 1rem; font-size: 2rem; font-weight: bold; text-transform: uppercase; color: white;">Mobil Uygulamamızla İşyerinizi Cebinize Taşıyın</h4>
+            <ul style="margin-bottom: 2rem; font-size: 1.25rem;">
+                <li>Müşterilerinize anında fiyat verebilirsiniz.</li>
+                <li>Pos cihazı taşımanıza gerek kalmaz.</li>
+                <li>Cari hesabınızı anlık kontrol edebilirsiniz.</li>
+                <li>Her an her yerde sipariş verebilirsiniz.</li>
+            </ul>
+            <div style="margin-top: 2rem; display: flex; align-items: center;">
+                <h2 style="margin-right: 1rem;" class="text-primary">Anında İndirin:</h2>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="https://play.google.com/store" target="_blank" <i class="fab fa-google-play text-primary fa-3x"></i></a>
+                    <a href="https://apps.apple.com/us/genre/ios/id36" target="_blank" <i class="fab fa-app-store text-primary fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- mesaj-->
+    <div class="container p-5">
+        <div class="row g-5">
+            <!-- Contact Form Column -->
+            <div class="col-lg-6">
+                <div class="contact-form bg-light p-5 rounded h-100 wow fadeInUp" data-wow-delay="0.2s">
+                    <h4 class="text-primary">Bize Ulaşın</h4>
+                    <p class="mb-4 text-uppercase">Görüş ve Önerileriniz bizim için değerlidir.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control border-0" id="firstname" placeholder="Adınız">
+                                    <label for="firstname">Adınız</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control border-0" id="lastname" placeholder="Soyadınız">
+                                    <label for="lastname">Soyadınız</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control border-0" id="phone" placeholder="Telefon">
+                                    <label for="phone">Telefon</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control border-0" id="email" placeholder="Email">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <select class="form-control border-0" id="contact-method" style="background-color:white;">
+                                        <option value="" disabled selected>İletişim Tercihiniz</option>
+                                        <option value="phone">Telefon</option>
+                                        <option value="email">Email</option>
+                                    </select>
+                                    <label for="contact-method">İletişim Tercihiniz</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <select class="form-control border-0" id="topic" style="background-color:white;">
+                                        <option value="" disabled selected>Konu Seçiniz</option>
+                                        <option value="support">Destek</option>
+                                        <option value="sales">Satış</option>
+                                        <option value="feedback">Geri Bildirim</option>
+                                    </select>
+                                    <label for="topic">Konu Seçiniz</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control border-0" id="city" placeholder="Şehir Seçiniz">
+                                    <label for="city">Şehir Seçiniz</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control border-0" placeholder="Mesajınız" id="message" style="height: 160px"></textarea>
+                                    <label for="message">Mesajınız</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3">Mesajı Gönder</button>
+                            </div>
+                        </div>
+                    </form>       
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-3">
+                <img src="img/offer-4.jpg" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5 border-start-0 border-end-0"
+            style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <a href="index.html" class="p-0">
+                            <h4 class="text-white mb-4"><img src="img/logo-header.png" alt="Logo" style="height: 30px;"> Kombi Klima Shop</h4>
+                            <!-- <img src="img/logo.png" alt="Logo"> -->
+                        </a>
+                        <p class="mb-4">Türkiye'de Tek Noktada Çoklu Çözüm ilkesi ile üreticiler, perakendeciler ve son kullanıcılar için fark yaratan marka olmaktan gurur duyuyoruz!</p>
+                        <a class=" mb-5" href="#">Devamını oku...</a>
+                        <div class="d-flex">
+                            <a href="#" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
+                                <i class="fas fa-apple-alt text-white"></i>
+                                <div class="ms-3">
+                                    <small class="text-white">Download on the</small>
+                                    <h6 class="text-white">App Store</h6>
+                                </div>
+                            </a>
+                            <a href="#" class="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2">
+                                <i class="fas fa-play text-primary"></i>
+                                <div class="ms-3">
+                                    <small class="text-white">Get it on</small>
+                                    <h6 class="text-white">Google Play</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Şubelerimiz</h4>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">Genel Müdürlük</p>
+                            
+                        </div>
+                        <p>Atatürk Mah. Ataşehir Bulvarı Ertuğrul Gazi Sk. Metropol İstanbul A2 Blok Kat:17 D:285<br> ATAŞEHİR / İSTANBUL</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">Dudullu Şube</p>
+                            
+                        </div>
+                        <p>Adem Yavuz Mahallesi, Alemdağ Caddesi, No:431
+                            <br> ÜMRANİYE / İSTANBUL</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <a class="mb-0" href="contact.html">Daha fazlası için tıklayın.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">İletişim</h4>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <p class="text-white mb-0">info@kombiklimashop.com</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-phone-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">444 19 87</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-phone-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">0216 611 99 11</p>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <i class="fab fa-firefox-browser text-primary me-3"></i>
+                            <p class="text-white mb-0">Yoursite@ex.com</p>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <i class="fas fa-check-circle text-primary me-3"></i>
+                            <p class="text-white mb-0">Haftaiçi / 08:30 – 18:00</p>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <i class="fas fa-check-circle text-primary me-3"></i>
+                            <p class="text-white mb-0">Cumartesi / 08:30 – 14:30</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-times-circle text-primary me-3"></i>
+                            <p class="text-white mb-0">Pazar / Kapalı</p>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                    class="fab fa-facebook-f text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                    class="fab fa-twitter text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                    class="fab fa-instagram text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i
+                                    class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right
+                        reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-body">
+                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                    Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
+                    Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <script>
+        // JavaScript ile hover etkisini yönetmek
+        document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+            submenu.addEventListener('mouseover', function () {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+            });
+            submenu.addEventListener('mouseout', function () {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+            });
+        });
+    </script>
+
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

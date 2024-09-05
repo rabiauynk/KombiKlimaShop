@@ -44,5 +44,25 @@ namespace DataAccessLayer.Repositories
 			_context.Update(entity);
 			_context.SaveChanges();
 		}
-	}
+        public void UpdateDealerImages(int dealerId, List<string> imageUrls)
+        {
+            var dealer = _context.Dealers.Find(dealerId);
+            if (dealer == null) throw new ArgumentException("Dealer not found");
+
+            dealer.ImageUrls = imageUrls;
+            _context.Update(dealer);
+            _context.SaveChanges();
+        }
+        public void UpdateNewsImages(int newsId, List<string> imageUrls)
+        {
+            var news = _context.New.Find(newsId);
+            if (news == null) throw new ArgumentException("News not found");
+
+            news.ImageUrls = imageUrls;
+            _context.Update(news);
+            _context.SaveChanges();
+        }
+
+
+    }
 }

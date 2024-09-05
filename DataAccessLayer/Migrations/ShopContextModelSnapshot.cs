@@ -115,7 +115,7 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("ImageUrls")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -159,7 +159,7 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("ImageUrls")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

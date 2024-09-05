@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ShopWebUI.Dtos.DealerCategoryDtos;
-using System.Net.Http;
 using System.Text;
 
 namespace ShopWebUI.Controllers
 {
-	public class DealerCategoryController : Controller
-	{
+    public class DealerCategoryController : Controller
+    {
 		private readonly IHttpClientFactory _httpClientFactory;
 
 		public DealerCategoryController(IHttpClientFactory httpClientFactory)
@@ -33,13 +32,21 @@ namespace ShopWebUI.Controllers
 			return View();
 		}
 		[HttpPost]
-		public async Task<IActionResult> CreateDealerCategory(CreateDealerCategoryDto createDealerCategoryDto)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateDealerCategory(CreateDealerCategoryDto createDealerCategoryDto)
 		{
 			var client = _httpClientFactory.CreateClient();
 			var jsonData = JsonConvert.SerializeObject(createDealerCategoryDto);
 			StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
 			var responseMessage = await client.PostAsync("https://localhost:7052/api/DealerCategory", stringContent);
-			if (responseMessage.IsSuccessStatusCode)
+            var responseContent = await responseMessage.Content.ReadAsStringAsync();
+            if (!responseMessage.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Error: {responseMessage.StatusCode}");
+                Console.WriteLine($"Response Content: {responseContent}");
+                return View();
+            }
+            if (responseMessage.IsSuccessStatusCode)
 			{
 				return RedirectToAction("Index");
 			}
@@ -84,4 +91,5 @@ namespace ShopWebUI.Controllers
 		}
 	}
 }
+    
 

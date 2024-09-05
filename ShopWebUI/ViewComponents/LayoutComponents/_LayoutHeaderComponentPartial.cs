@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ShopWebUI.ViewComponents.LayoutComponents
+namespace ShopWebUI.ViewComponents.LayoutComponent
 {
-	public class _LayoutHeaderComponentPartial : ViewComponent
-	{
-		public IViewComponentResult Invoke()
-		{
-			return View();
-		}
-	}
+    public class _LayoutHeaderComponentPartial : ViewComponent
+    {
+        public IViewComponentResult Invoke()
+        {
+            return View();
+        }
+    }
 }

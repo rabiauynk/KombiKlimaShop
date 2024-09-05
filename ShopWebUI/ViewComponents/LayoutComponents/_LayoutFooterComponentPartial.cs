@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ShopWebUI.ViewComponents.LayoutComponents
+namespace ShopWebUI.ViewComponents.LayoutComponent
 {
-	public class _LayoutFooterComponentPartial:ViewComponent
+	public class _LayoutFooterComponentPartial : ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{

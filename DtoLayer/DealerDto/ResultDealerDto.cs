@@ -15,7 +15,6 @@ namespace DtoLayer.DealerDto
 		public string DealerDistrict { get; set; }
 		public string DealerCity { get; set; }
 		public string Phone { get; set; }
-		public string ImageUrl { get; set; }
-       
+        public List<string> ImageUrls { get; set; } = new List<string>();
     }
 }

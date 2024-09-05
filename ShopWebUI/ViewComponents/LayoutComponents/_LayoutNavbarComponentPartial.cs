@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ShopWebUI.ViewComponents.LayoutComponents
+namespace ShopWebUI.ViewComponents.LayoutComponent
 {
 	public class _LayoutNavbarComponentPartial:ViewComponent
 	{
@@ -10,4 +10,3 @@ namespace ShopWebUI.ViewComponents.LayoutComponents
 		}
 	}
 }
-

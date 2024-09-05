@@ -3,13 +3,13 @@
     ViewData["Title"] = "CreateDealerCategory";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
 <div class="content">
     <div class="container-fluid">
         <h4 class="page-title">Firma Kategori İşlemleri</h4>
         <div class="row">
             <div class="col-md-12">
-                <form method="post">
+                <form method="post" asp-action="CreateDealerCategory">
+                    @Html.AntiForgeryToken()
                     <div class="card">
                         <div class="card-header">
                             <div class="card-title">Yeni Firma Girişi</div>
@@ -18,6 +18,7 @@
                             <div class="form-group">
                                 <label for="categoryname">Kategori Adını Giriniz</label>
                                 <input type="text" class="form-control" asp-for="CategoryName" id="categoryname">
+                                <span asp-validation-for="CategoryName" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="card-action">
@@ -29,4 +30,3 @@
         </div>
     </div>
 </div>
-

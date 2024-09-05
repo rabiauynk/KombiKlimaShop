@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Stocker - Stock Market Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Haritada Göster</a> 
+                        <a href="mailto:info@kombiklimashop.com" class="text-muted small me-4"><i class="fas fa-envelope text-primary me-2"></i>info@kombiklimashop.com</a>
+                        <a href="tel:+0216 611 99 11" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>0216 611 99 11</a>
+                        <a href="tel:+444 19 87" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>444 19 87</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Üye Ol</small></a>
+                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Üye Girişi</small></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">                
+                    <img src="img/logo-header.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto py-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Anasayfa</a>
+                        </li>
+                        <!-- Dropdown Menu for Kurumsal -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Kurumsal</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Hakkımızda </a>
+                                    <ul class="dropdown-menu" style="display: none; position: absolute; left: 100%; top: 0; margin-left: 0.1rem;">
+                                        <li><a class="dropdown-item" href="whoarewe.html">Biz Kimiz?</a></li>
+                                        <li><a class="dropdown-item" href="purchase.html">Satınalmanızı Yapıyoruz</a></li>
+                                        <li><a class="dropdown-item" href="collection.html">7/24 Tahsilat</a></li>
+                                        <li><a class="dropdown-item" href="profit.html">Karlılığınızı Arttırıyoruz</a></li>
+                                        <li><a class="dropdown-item" href="sales.html">Satış Potansiyeli</a></li>
+                                        <li><a class="dropdown-item" href="mobileapp.html">Mobil Uygulama</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="history.html">Tarihçemiz</a></li>
+                                <li><a class="dropdown-item" href="founder.html">Kurucularımız</a></li>
+                                <li><a class="dropdown-item" href="vision.html">Vizyon & Misyonumuz</a></li>
+                                <li><a class="dropdown-item" href="reward.html">Sertifikalar & Ödüller</a></li>
+                                <li><a class="dropdown-item" href="video.html">Tanıtım Videoları</a></li>
+                                <li><a class="dropdown-item" href="https://www.belgemodul.com/sirket/1442">Bilgi Toplumu Hizmetleri</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"> <a href="contact.html" class="nav-link" >İletişim</a> </li>
+                        <li class="nav-item"> <a href="new.html" class="nav-item nav-link">Haberler</a> </li>
+                        <li class="nav-item"> <a href="offer.html" class="nav-item nav-link">Kampanyalar</a></li>
+                        <li class="nav-item"> <a href="dealer.html" class="nav-item nav-link">Bayilerimiz</a></li>
+                        <li class="nav-item"> <a href="sss.html" class="nav-item nav-link active">S.S.S.</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Ürünleri İncele</a>
+                </div>
+            </nav>
+
+             <!-- Header Start -->
+             <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Sık Sorulan Sorular</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+                        <li class="breadcrumb-item active text-primary">Sık Sorulan Sorular</li>
+                    </ol>    
+                </div>
+            </div>
+            <!-- Header End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- SSS Start -->
+        <div class="container-fluid faq-section pb-5">
+            <div class="container pb-5 overflow-hidden">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="accordion accordion-flush bg-light rounded p-5" id="accordionFlushSection">
+                            <div class="accordion-item rounded-top">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        10 Soruda Yoğuşmalı Kombi
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">
+                                        <p style="color: red;">1. Yoğuşmalı Kombi Nedir?</p>
+                                        <p>Gaz halindeki bir maddenin çevresine ısı vererek sıvı hale dönüşmesi olayına <strong>YOĞUŞMA</strong> denir. Doğal gazın yanması sonucunda ortaya çıkan ve bacadan dışarı atılacak baca gazının su buharındaki enerjiyi özel ısı eşanjörü sayesinde geri kazanarak toplam verimi arttıran cihazlara <strong>YOĞUŞMALI KOMBİ</strong> denir.</p>
+                                        
+                                        <p style="color: red;">2. Kombilerde ErP Yönetmeliği Nedir?<p>
+                                        <p>21 Nisan 2018 yılında ülkemizde yürürlüğe girmiştir. Bu yeni yönetmelik sonucunda müşterilerin; yüksek verimli, düşük NOx emisyonlu, çevreci ve ürün üzerinde minimum bilgileri olan <strong>YOĞUŞMALI KOMBİLERİ</strong> kullanması sağlanmıştır. Bu tarih itibariyle standart kombilerin üretimi sonlandırılmış ve enerji etiketi zorunluluğu getirilmiştir.</p>
+                                        <p>Kısaca ErP, Energy – related Products – Enerji İlişkili Ürünler Direktifi demektir. Avrupa Birliği’ne üye olan ülkelerde yürürlükte olup, bir takım yasal yaptırımları tanımlamaktadır.</p>
+                                        
+                                        <ul>
+                                          <li><strong>LOT1:</strong> Isıtma Cihazları (Mahal ve Kombine Isıtıcılar) Kazan, Kombi, Isı Pompası vb. (Yer tipi kazanlar da bu kapsama dahildir. Katı yakıt ile çalışan kazanlar ErP kapsamı dışındadır. ErP’de tanımlanan mahal ısıtıcısı kapsamı “sıvı, gaz yakıtlı ve elektrikli” şeklindedir.)</li>
+                                          <li><strong>LOT2:</strong> Su Isıtıcıları (Su Isıtıcıları ve Boylerler) Şofben, Boyler, Güneş Enerjisi Sistemleri vb.</li>
+                                          <li><strong>LOT11:</strong> Ürünlere Entegre ve Bağımsız Sirkülasyon Pompaları (salmastrasız)</li>
+                                        </ul>
+                                      
+                                        <p style="color: red;">3. Yoğuşmalı Kombinin Avantajları Nelerdir?</p>
+                                        <p>YYoğuşmalı kombilerin verimleri yüksektir. %103 verimli yarı yoğuşmalı cihazlar ve %108’in üzerinde tam yoğuşmalı cihazlar bulunmaktadır. Bu sayede daha düşük yakıt tüketimi vardır. Alev boyunu ihtiyaca göre ayarlayarak, dur/kalk yapmadan modülasyonlu şekilde çalışır. Fan ve pompa modülasyonu sayesinde tüketilen gaz miktarına bağlı olarak yüksek yanma verimi elde edilir ve çok daha sessiz çalışma sağlanır. Daha düşük emisyon (CO ve NOx) oranları ile, daha çevrecidir.</p>
+
+                                        <p style="color: red;">4. Tam Yoğuşmalı ve Yarı Yoğuşmalı Kombi Farkı Nedir? </p>
+                                        <p>Tam yoğuşmalı kombiler %108’in üzerinde verimi olan premix eşanjör prensibi ile çalışan cihazlardır. Yüksek yanma verimi prensibi ile çalışan yoğuşmalı kombilerdir. Yarı yoğuşmalı kombilerde reküperatör olarak adlandırılan üçüncü bir eşanjör bulunmaktadır. Bu eşanjör baca ısısından yararlanarak ısı geri kazanım sağlanması prensibine göre çalışır. Yarı yoğuşmalı kombilerin verimi %103’dür. </p>
+
+                                        <p style="color: red;">5. Yoğuşmalı Kombi Alırken Nelere Dikkat Etmeliyim?</p>
+                                        <p>Yoğuşmalı kombilerde, ErP etiketine, verim değerlerine ve modülasyon aralığına dikkat edilmelidir. Yoğuşmalı cihazlar ileri teknoloji ürünü olduklarından dolayı marka ve üretici firma çok önemlidir. Fiyatı yüksek olan kaliteli ürün demek değildir. Daha az arıza ihtimali olmasına karşın yine de servis ağı güçlü bir firma tercih edilmelidir. </p>
+                                        
+                                        <p style="color: red;">6. Hangi Tip Tesisatlarda Kullanabilirim?</p>
+                                        <p>Piyasadaki yaygın inanışın aksine, “kullanılması gereken minimum panel radyatör miktarı” diye bir sınırlama yoktur. Bulunulan ortamın ısı ihtiyacına göre uygun miktarda panel radyatör takılmalıdır. Yerden ısıtma ve 5 metre dahi olsa bile radyatörlü sistem gibi her türlü ısıtma sistemine uygundur. </p>
+                                        
+                                        <p style="color: red;">7. Ne kadar Alanı Isıtabilirim?</p>
+                                        <p>İstanbul şartları ve izolasyonu kötü olmayan normal daireler için pratik olarak hesaplanmış ısıtılabilecek alanlar şu şekildedir.
+                                            <p>140 m2’ ye kadar .............	20.000 kcal/h</p>
+                                            <p>200 m2’ ye kadar..............	26.000 kcal/h</p>
+                                        </p>
+                                        
+                                        <p style="color: red;">8. Montaj’da Nelere Dikkat Etmeliyim?</p>
+                                        <p>Yoğuşma esnasında bacada oluşacak Yoğuşma Suyunun ortamdan güvenle tahliyesini sağlamak için yoğuşma suyunun gidere bağlanması gerekir.
+                                            Yoğuşmalı Kombinin balkona takılması durumunda, balkonun kapatılması gerekmektedir.<br>
+                                            Yoğuşmalı kombinizin montajını ilgili firmasından bu konuda eğitim almış teknik personeline, gaz dağıtım şirketinin teknik şartnamesine uygun olarak yaptırtınız. </p>
+                                        
+                                        <p style="color: red;">9. Ekonomik Ömrü ve Garanti Süresi Ne Kadardır?</p>
+                                        <p>Sanayi ve Ticaret Bakanlığının belirlediği ekonomik ömür 10 yıl olup, Yoğuşmalı cihazı daha uzun yıllar kullanmanızı ümid ederiz. Her yıl kış öncesi ücreti karşılığında yetkili servisine bakım yaptırmanızı tavsiye ederiz.
+                                            Garanti süresi markasına göre 2-10 yıl arasında olup, isteğe bağlı 2’şer yıllık ek garanti satın alabilirsiniz. </p>
+
+                                        <p style="color: red;">10. Nasıl Satın Alabilirim?</p>
+                                        <p>Ürünleri, Kombi Klima Shop İş Ortaklarından temin edebilirsiniz.
+                                            Firmalar ise aşağıdaki telefon veya web adresinden bizlere ulaşabilir.<br>
+                                            Size bir telefon kadar yakınız... <strong>444 19 87</strong><br>
+                                            www.kombiklimashop.com adresinden 7/24 sipariş verebilirsiniz...<br>
+                                            En uygun <strong>KAMPANYA</strong> fiyatı ile STOK’tan hemen teslim... </p>
+                                        
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Kombi Hakkında Bilinmesi Gerekenler
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">
+                                        <p style="color: red;">1. Kombi nedir?</p>
+                                        <p>Konutun hem ısıtma hem de sıcak su gereksinimini karşılayan bir cihazdır. Bu nedenle kısaca Kombi (İngilizcede Combined/Birleşik) olarak adlandırılır.</p>
+                                        <p style="color: red;">2. Nasıl bir cihazdır?</p>
+                                        <p>Hafiftir, ufaktır, duvara asılır ve bu nedenle az yer kaplar, kolay taşınabilir, sessizdir, kullanıcıya bağımsız ısınma konforu sağlar.</p>
+                                        <p style="color: red;">3. Kombi hangi malzemeden yapılır?</p>
+                                        <p>Genel olarak Galvanizli çelik, DKP saç, bakır, alüminyum ve plastik parçalardan oluşur.</p>
+                                        <p style="color: red;">4. Ne tür ekipmanlara sahiptir?</p>
+                                        <p>Isıtma sistemi için gereken pompa, genleşme tankı, termostat, kontrol panosu gibi zorunlu sistem ve emniyet ekipmanlarına sahiptir.</p>
+                                        <p style="color: red;">5. Kombi kullanmanın avantajları nelerdir?</p>
+                                        <p>Bireysel ısınma özgürlüğü sağlar. Kullandığınız kadar yakar ve ödersiniz. Ayrıca sıcak kullanım suyu konforu sağlar. Sıcak su için ayrı bir cihaz (şofben, termosifon, boyler v.s.) kullanmanıza gerek kalmaz.</p>
+                                        <p style="color: red;">6. Daha çok küçük mekanlara mı uygundur?</p>
+                                        <p>Çok yakın bir geçmişe kadar küçük mekanlar için uygundu ancak son teknolojiler ve kaskat uygulamalar ile daha fazla alan ısıtılabiliyor.</p>
+                                        <p style="color: red;">7. Çalışma ilkesi nedir?</p>
+                                        <p>Kombi cihazları şofbenlerde olduğu gibi borulardan gelen suyun bir eşanjör vasıtasıyla ısıtılması ilkesi üzerine çalışırlar.</p>
+                                        <p style="color: red;">8. Kombi ile güvende miyim?</p>
+                                        <p>Kombilerde baca tepmesine ve çekmemesine, aşırı ısınmalara, alev sönmesine, donmaya ve gaz kaçağına karşı TSE standartlarının ön gördüğü her türlü önlem ve tertibat alınmıştır.</p>
+                                        <p style="color: red;">9. Kombi alırken nelere dikkat etmeliyim?</p>
+                                        <p>Nasıl bir ürün alacağınız hakkında araştırma yapın. Isıtma sistemleri ile ilgili satış ve teşhir yapan bayileri gezin, broşür alın, teknik bilgi edinin. Tavsiye edilen cihazın kapasitesinin yeterli gelip gelmeyeceğini öğrenin. Bilinen, geniş servis ağı olan ve güçlü firmaların ürünlerini tercih edin ve mutlaka TSE damgası arayın. Ayrıca kombi terchinde ilk maliyet değil, tüketim bedeli ve servis maliyetlerinin de önemli olduğu unutulmamalıdır.</p>
+                                        <p style="color: red;">10. Kombiler kaça ayrılır?</p>
+                                        <p>Kombiler çalışma prensibine göre bacalı, hermetik, baca fanlı (yarı hermetik) olmak üzere üçe ayrılırlar. Ateşleme sistemine göre pilot alevli ve elektronik ateşlemeli olmak üzere ikiye ayrılırlar. Ayrıca son zamanlarda yoğuşmalı kombiler yeni bir kombi ürün grubu olarak ön plana çıkmaktadır.</p>
+                                        <p style="color: red;">11. Kombileri birbirinden ayıran özellikler nelerdir?</p>
+                                        <p>Genelde kombi teknik özellikleri aynı olmasına rağmen son teknolojik gelişmeler ile dijital kontrol paneli, full alev modülasyonu, yoğuşma teknolojisi, ön karışım teknolojisi (yanma havası ayarı yapabilmesi), arıza uyarı sistemi, dış hava sondası ve oda termostadı ile kullanım, aşırı soğuklarda donmaya karşı koruma, pompa sıkışmasına engel olma gibi ilave teknik özellikler ile kombiler birbirinden ayrılmaktadır.</p>
+                                        <p style="color: red;">12. Bacalı kombi ile hermetik kombi arasındaki fark nedir?</p>
+                                        <p>Bacalı kombilerde fan yoktur. Atık gaz, sıcaklığından dolayı genleşerek yükselir, tabii bir çekim ve baca vasıtasıyla dış ortama atılır. Bu nedenle bacalı kombi cihazları standartlara uygun yapılmış bir bina bacasına bağlanmalıdır. Aksi takdirde bacadan sızan atık gaz ortamdaki kişileri zehirler. Hermetik kombi ise fanlıdır. Atık gaz fan ile iç borudan dış ortama cebri olarak atılırken, dış borudan da yanma havasını yanma odasına çeker. Bu nedenle, hermetik kombi cihazlarının bina bacasına ihtiyacı yoktur, evin dış ortama açılabilen herhangi bir mekanına monte edilebilirler. Ortamdaki havayı tüketmezler ve baca çekiş problemi olmaması nedeniyle ortamdaki havayı kirletmezler.</p>
+                                        <p style="color: red;">13. Evim için hangi kombi çeşidini tercih etmeliyim?</p>
+                                        <p>Binada standartlara uygun müstakil baca mevcut ise bacalı, baca standartlarına uygun olmayan bir baca var ise veya baca yok ise kesinlikle hermetik kombi tercih etmelisiniz.</p>
+                                        <p style="color: red;">14. Yoğuşmalı kombilerin özelliği nedir?</p>
+                                        <p>En önemli özelliği az enerji tüketmesidir. Böylelikle de işletme maliyetini düşürür. Bu cihazlar duman gazı içindeki su buharını yoğuşturarak ve baca gazı sıcaklığını düşürerek ilave verim artışı ve enerji kazanırlar.</p>
+                                        <p style="color: red;">15. Maliyeti diğerlerine göre yüksek midir?</p>
+                                        <p>Gerek cihaz fiyatlarının biraz yüksek olması, gerekse düşük sıcaklıkta çalışmasından dolayı daha fazla radyatör maliyeti getirdiğinden yoğuşmalı sistemlerde ilk yatırım maliyeti yüksektir. Ancak daha az enerji harcadıklarından işletme maliyeti düşer. En ideal kullanımı, düşük sıcaklıkta çalışması zorunlu olan (30-50 OC) yerden ısıtma sistemlerinde bu kombinin tercih edilmesidir.</p>
+                                        <p style="color: red;">16. Evime kombi kurdurmak çok vaktimi alır mı?</p>
+                                        <p>Hayır almaz. Kalorifer tesisatı hazır ise kombi, çok kolaylıkla monte edilebilen bir cihazdır.</p>
+                                        <p style="color: red;">17. Kombiler yalnızca doğal gaz ile mi çalışır?</p>
+                                        <p>Kombiler doğal gazın yanı sıra LPG ile de çalışır.</p>
+                                        <p style="color: red;">18. Kombileri açık alanlara mı monte etmek gerekir?</p>
+                                        <p>Hermetik Kombiler dolap içine alınması kaydıyla açık balkona monte edilebilirler. Yoğuşmali Kombiler açık balkona ve dış duvarlara monte edilemezler, kapalı balkon ve ev içine monte edilebilirler. Bacalı Kombilerin banyolara monte edilmeleri yasaktır, monte edildikleri mekanın havalandırılması ile ilgili gaz kuruluşları tarafından konmuş birtakım kurallar ve şartnameler mevcuttur.</p>
+                                        <p style="color: red;">19. Kombiyi kurduğum balkonun camekanlı olması gerekli midir?</p>
+                                        <p>Camekanlı veya plastik camla kapatılmış balkona kombi monte etmek mümkündür. Ancak bacalı ve yoğuşmalı kombilerde gaz kuruluşu tarafından yeterli havalandırma şartları yinede aranmaktadır.</p>
+                                        <p style="color: red;">20. Kombilerin kapasiteleri nedir?</p>
+                                        <p>100-120 m2 daireler için 17-20 bin kcal/h kapasiteden başlayarak güçleri ısıtılan mahal alanına göre artmaktadır.</p>
+                                        <p style="color: red;">21. Kombinin ömrü ne kadardır?</p>
+                                        <p>Kombilerin ürün ekonomik ömrü, Sanayi Bakanlığı tarafından 15 yıl olarak belirlenmiştir.</p>
+                                        <p style="color: red;">22. Evdeki herkes kombiyi çalıştırabilir mi? Kullanımı karmaşık mıdır?</p>
+                                        <p>Kombilerin kullanımı çok basit olup, kullanımı normal ev cihazları (çamaşır veya bulaşık makinesi) kullanımı kadar kolaydır.</p>
+                                        <p style="color: red;">23. Kombim arızalandığında ne yapmalıyım?</p>
+                                        <p>Kombiniz arızalandığı takdirde önce kullanma klavuzundaki arıza giderme yöntemlerini uygulamanız gerekir. Eğer arıza halen sürüyor ise kombinizi aldığınız firmanın en yakın yetkili servisine başvurmanız gerekmektedir.</p>
+                                        <p style="color: red;">24. İthal cihazlarla ilgili sorunları kime bildirmeliyim?</p>
+                                        <p>İthal cihazlarla ilgili sorunlarınızı önce ürünü aldığınız firmaya bildirmelisiniz. Sorun çözülmüyor ise Sanayi ve Ticaret Bakanlığı'na bağlı il-ilçe hakem heyetlerini haberdar edebilirsiniz. Bakanlık ve TSE ithal ürünlerin kalite ve yeterliliğini denetlemekle yükümlüdür. Yerli ve yabancı cihazlarla ilgili olan ve imalattan kaynaklanan sorunlarınız için TMMOB Makine Mühendisleri Odası veya Türk Standartlar Enstitüsü'ne (TSE) başvurunuz.</p>
+                                        <p style="color: red;">25. Sadece sıcak su kullanmak istediğimde ne yapmalıyım?</p>
+                                        <p>Kombinizi yaz çalışma konumuna getirdiğinizde sadece kullanım sıcak suyu sağlarsınız.</p>
+                                        <p style="color: red;">26. Isınmanın en ekonomik yolu kombi midir?</p>
+                                        <p>Kombi sistemleri bağımsız ısınma konforu sağlamaktadırlar. Kişiler istedikleri sürede istedikleri kadar ısınırlar. Merkezi ısınma sistemleri, özellikle 3-4 daireden fazla olan konutlarda, yakıt ekonomisi açısından kombilerden daha avantajlıdır. Ancak kombideki bağımsız ısınma konforunu merkezi sistemlerde yakalayamazsınız.</p>
+                                        <p style="color: red;">27. Geceleri kombiyi nasıl bir ayarda tutmalıyım?</p>
+                                        <p>Binanın dış hacminin soğumaması için, geceleri en düşük seviyede ısıtmak yeterli olacaktır. Kombimizi geceleri düşük bir derecede çalıştırmaz isek, kullanım saatlerinde kombiyi çalıştırdığımızda bina blokunun ısınması oldukça zaman alır. Ve enerji tüketimi büyük oranda artar.</p>
+                                        <p style="color: red;">28. Kombiyi 24 saat açık tutmak zararlı mıdır?</p>
+                                        <p>Kombinin 24 saat açık tutulmasında bir sakınca yoktur.
+                                        <p style="color: red;">29. Kombi sürekli yakıldığı halde yeterli ısınma sağlanamıyorsa ne yapılmalıdır?</p>
+                                        <p>Kombi sürekli açık tutulduğu halde ısınılamıyorsa, ya kombinin kapasitesi düşük seçilmiştir, ya evinizin izolasyonu kötüdür yada yapılan sistemle ilgili bir hata vardır. Radyatörler eks*k veya devir daim pompasının basıncı ve debisi düşük olabilir. Teknik servisin gelip kontrol etmesi gerekir.</p>
+                                        <p style="color: red;">30. Kombimi kısa süre için kapatıp tekrar açarsam daha fazla mı yakıt harcar?</p>
+                                        <p>Evet. Örneğin; evin içerisinde 22 derecelik belli bir konfor ortamına ulaştık. Kombiyi kapattığımız zaman tekrar 22 dereceye ulaşmamız için daha fazla yakıt sarfiyatı gerekir. Bundan dolayı da kombiyi kapatmadan düşük seviyelerde kullanmak daha iyi olacaktır.</p>
+                                        <p style="color: red;">31. Kombimin sıcak su konumunda çalışması için en az ne kadar su gerekir?</p>
+                                        <p>Kombiler genelde 2,5 lt./dk. su debisi ve 0,25 bar su basıncında dahi sıcak su üretebilmektedir.</p>
+                                        <p style="color: red;">32. Kombi cihazını şofben gibi, sadece sıcak su kullanımına yönelik kullanabilir miyim? Böyle bir durumda ek bir radyatör ve radyatör bağlantısı gerekli midir?</p>
+                                        <p>Kombi cihazınızı sadece sıcak su temin etmek amacıyla bir şofben gibi kullanabilirsiniz, ancak radyatör hattı kullanmayacaksanız, uygun bir uzunlukta by pass hattı gerekir.</p>
+                                        <p style="color: red;">33. Kombili bir evde, doğalgaz tasarrufu için kullanılmayan salonun radyatörlerini kapatmak veya kısmak doğru mudur?</p>
+                                        <p>Kombi sisteminde bir pompa yardımıyla devir daim söz konusudur. Devir daim pompasının sağlıklı çalışması için en az üç radyatörün çalışması önerilmektedir. Bazı odalar kapatılabilir ancak en az üç tane peteğin çalışıyor olması gereklidir.</p>
+                                        <p style="color: red;">34. Bulunduğumuz yerde doğalgaz olmadığı için kombiyi tüpgazla çalıştırabilir miyiz?</p>
+                                        <p>Çalıştırılabilir. Ancak en az iki tüp gereklidir. Ayni anda iki tüpgaz kullanmanızı sağlayacak özel tüp gaz kiti kullanılmalıdır. Ancak tüpgaz fiyatları doğalgaza oranla pahalı olduğu için tercih edilmemektedir.</p>
+                                        <p style="color: red;">35. Merkezi sistemden kombi sistemine dönüş yapıldığında var olan radyatörlerimi kullanabilir miyim?</p>
+                                        <p>Kullanabilirsiniz. Kullanmadan önce cihaza herhangi bir zarar gelmemesi için radyatörlerin iç temizliğinin yapılması ve tesisatın komple temizlenmesi gerekmektedir.</p>
+                                        <p style="color: red;">36. Kombi cihazının ortalama garanti süresi kaç yıldır?</p>
+                                        <p>Kombilerde Garanti süresi minumum 2 yıldır. Bazı markalar isteğe bağlı olarak ücreti karşılığında ilave bakım ve garanti sürelerini uzatmaktadır.</p>
+                                        <p style="color: red;">37. Kombimin bakımı için neler yapmalıyım?</p>
+                                        <p>Her altı ayda bir yetkili servis çağrılarak tesisat filtrelerinin temizlenmesi ve bacalı kombilerde baca çekiş kontrolü ve temizliği gerekmektedir.</p>
+                                        <p style="color: red;">38. Kombi nerede satılır?</p>
+                                        <p>Kombiler merkez firmanın yetkili kıldığı ve sertifika verdiği yetkili satıcılarında satılır.</p>
+                                        <p style="color: red;">39. Evimdeki radyatör boruları tıkanırsa kombim bozulur mu?</p>
+                                        <p>Hayır. Kombi bozulmaz. Sadece arızaya geçer ve çalışması durur. Tıkanıklık giderildikten sonra kombi çalışmaya devam eder.</p>
+                                        <p style="color: red;">40. Kombinin ortalama ısı ayarı kaç derecede olmalıdır?</p>
+                                        <p>Kombi ısı ayarı binanın izolasyon ve dizayn özellikleri, mevsimsel geçişler ve tesisat türleri gibi değişkenlere bağlı olarak değişmektedir. Isıtma sistemleri 90/70 OC' a göre dizayn edilmiştir. Ancak bu değer en yüksek ısı kayıblarına göre seçildiğinden genelde 80 ila 55 OC arasında bir sıcaklık yeterli olmaktadır.</p>
+                                        <p style="color: red;">41. Kombinin bar ayarı sıfırlanırsa kombi çalışır mı?</p>
+                                        <p>Kombi basıncı düşer ise kombi çalışmaz ve arızaya geçer.kombi ortalama basıncı en az 1 bar olmalıdır.</p>
+                                        <p style="color: red;">42. Kombinin su basıncı hangi seviyede tutulmalıdır?</p>
+                                        <p>Kombi kalorifer tesisatı çalışma basıncı en az 1 bar olmalıdır.</p>
+                                        <p style="color: red;">43. Kombide yaz /kış konumu ne demektir?</p>
+                                        <p>Kış konumunda kombi hem kalorifer tesisatını ısıtır hemde şofben görevi görür. Yaz konumunda ise sadece şofben görevi görmektedir.</p>
+                                        <p style="color: red;">44. Bir apartmanda tek kombi ile birkaç daire aynı anda ısıtılabilir mi?</p>
+                                        <p>Isıtılabilir. Özellikle dublex daireler için uygundur. Ancak kombi kapasitesinin iki daireyi ısıtacak güçte seçilmesi gerekmektedir.</p>
+                                        <p style="color: red;">45. Kombide garanti süresi nasıl ve ne zaman başlar?</p>
+                                        <p>Kombide garanti süresi yetkili servisin cihazı devreye alması ile başlar. Yetkili servis tarafından devreye alınmadan kullanılan cihazlar garanti kapsamı dışında kalır.</p>
+                                        <p style="color: red;">46. Türkiye'ye ilk kombi ne zaman geldi?</p>
+                                        <p>Türkiye'de ilk kombi kullanımı 1988 yılında Ankara'da başlamıştır.</p>
+                                        <p style="color: red;">47. Türkiye'de kaç kişi kombi kullanıyor?</p>
+                                        <p>Yeni doğalgaz gelen bölgeler hariç sadece İstanbul, İzmit, Ankara, Bursa ve Eskişehir'de kayıtlı 2,600,000 kombi kullanıcısı bulunmaktadır.</p>
+                                        <p style="color: red;">48. Kombi ile beraber oda termostadı kullanmalımıyım?</p>
+                                        <p>Evet kullanmalısınız. Oda termostadları evin ısısını daha hassasayarladıkları için özellikle kombili sistemlerde tavsiye edilmekte ve ekonomi sağlamaktadır.</p>
+                                        <p style="color: red;">49. Çift eşanjörlü kombimi yoksa tek eşanjörlü kombimi tercih etmeliyim?</p>
+                                        <p>Tek eşanjörlü (birleşik eşanjör) kombilerde üç yollu vana gibi ilave ekipmanlar gerekmediği için arıza oranları düşmektedir. Eşanjör direkt alevle ısıtıldığı için verim yükselmektedir. Ayrıca tek eşanjörlü kombilerde pompa sıcak su alınması esnasında durduğundan pompa ömrü uzamaktadır.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        Duyulur ısı ve gizli ısı nedir? (Hissedilen sıcaklık)
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">Duyulur ısı, maddenin sıcaklığını değiştirmek için gereken ısı miktarıdır. Maddenin sıcaklığında farklıllık yaratır, ama halini değiştirmez. Gizli ısı ise, maddenin fiziksel halini değiştirmesine rağmen, sıcaklığında fark oluşturmaz. Klimalar ortamdan duyulur ısı çekerek sıcaklığı azaltırken; gizli ısı çekerek hava içindeki su buharlarını yoğunlaştırır, nem miktarını azaltır ve iç mekanı konforlu hale getirir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                        EER veya COP nedir?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">Klimanızın iç ortamdan dışarı ya da dış ortamdan iç ortama aktarabildiği enerji miktarının harcadığı elektrik enerjisine oranına EER (Enerji verim oranı) ya da COP (Performans katsayısı) denir. Bu oranın yüksekliği klimanızın verimliliğini gösterir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                        Heat-Pump nedir?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">
+                                        <p style="color: red;">1. Heat-Pump nedir?</p>
+                                        <p>Türkçe karşılığı ısı pompasıdır. Heat-Pump dış ortamda bulunan ısıyı iç ortama taşır. Bu sayede elektrik enerjisini direkt olarak ısıya çeviren elektrik sobalarına göre 2-3 kat daha az enerji tüketir.</p>
+                                        <p style="color: red;">2. Heat-Pump özelliği olan klimalar nasıl ısıtır?</p>
+                                        <p>Bu özelliğe sahip klimalar, soğutmayı gerçekleştirdikleri gibi ısıtmayı da soğutucu akışkan gazını yoğunlaştırarak ve buharlaştırarak gerçekleştirirler. Isıtmanın yapılabilmesi için, dış üniteden geçen gaz buharlaşarak dışarıdaki ısıyı emer ve iç üniteye geldiğinde yoğunlaşıp emdiği ısıyı gereken ortama bırakarak ısıtmayı gerçekleştirir.</p>
+                                        <p style="color: red;">3. Heat-Pump klimalar hangi durumlarda ısıtma amaçlı kullanılmalıdır?</p>
+                                        <p>Heat-Pump dış ortamda bulunan ısıyı iç ortama taşır. Dış ortam sıcaklığı düştükçe, heat-pump performansı da düşecektir. Bu nedenle, Heat-Pump klimaların çok soğuk iklimlerde ana ısınma aracı olarak kullanılmaları, yeterli ısıtma sağlanamayacağından uygun değildir. Bu tarz iklimlerde ana ısınma aracına ilave yardımcı ısınma aracı olarak kullanılabilirler. Özellikle, kış aylarının daha ılıman geçtiği ve dış ortam sıcaklıklarının 0-3 derecenin altına düşmediği durumlarda klimadan daha iyi ısıtma performansı alınabilir. Yalnızca klima ile ısıtılacak mekanlarda özellikle binanın ısı yalıtımı çok önemlidir.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                        Invertech (DC Inverter Teknolojisi)
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">Inverter klimalar, ortamdaki ısıtma/soğutma ihtiyacına göre kompresör hızını kontrol etme imkanı sunar. İstenen ortam sıcaklıklarına erişildiğinde kompresör hızı düşürülerek istenen konfor şartları korunur. Standart klimalar istenen ortam sıcaklığını yakalamak için kompresörlerini belirli aralıklarla durdurur ve çalıştırır. Bu duruş-kalkışlar sırasında çok fazla enerji kaybı yaşanır. Inverter klimalar dur-kalk yerine, kompresör hızını ihtiyaca göre artırıp azaltarak enerji kaybını önler. Böylece standart klimalara göre %44 oranında enerji tasarrufu sağlanır. DC Inverter Teknolojisi sayesinde Invertech klimalar, konvansiyonel klimalara göre %50 daha kısa sürede ortamı istenen sıcaklığa getirir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                        Klima için servis hizmeti ne kadar önemli?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">Klimanızın performansı ve düşük enerji tüketimi açısından ürün kalitesi kadar montaj ve servis kalitesi de önemlidir. Montaj esnasında oluşabilecek hatalar ürününüzden beklediğiniz performansı almanızı engelleyebilir. Ayrıca klimanızın verimliliğini uzun yıllar koruyabilmesi için, ısı transfer yüzeylerinde meydana gelen kirlenmelerin temizlenmesi ve cihazınızın rutin bakımlarının yapılması gerekmektedir. Bu nedenle klimanıza yılda en az 1 kere bakım yapılması önemlidir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                        Klima Nasıl Soğutur ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">Klima (buzdolabında olduğu gibi) soğutucu akışkan gazının buharlaşma ve yoğunlaşma özelliğinden faydalanarak odada bulunan ısıyı dışarı atar. Split klimalarda, iç ünite içinden geçen gaz, ortamdaki ısıyı emerek buharlaşır ve böylece ortam soğur. Buharlaşan soğutucu akışkan gazı dış üniteye geldiğinde yoğunlaşır ve emdiği ısıyı dışarı atar. Bu işlem gerçekleşirken yalnızca iç ve dış ünitedeki fan motorları ve gazın cihaz içindeki dolaşımını sağlayan kompresör elektrik enerjisi harcar.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingNine">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                        Klimada enerji seviyeleri ne anlama gelmektedir?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">Klimanız soğutma konumunda iç ortamda bulunan fazla ısı enerjisini alarak dış ortama taşırken, ısıtma konumunda dış ortamdan aldığı ısı enerjisini iç ortama aktarmaktadır. Bu operasyonu gerçekleştirebilmek için soğutucu akışkanı kompresör yardımı ile kapalı soğutma çevrimi içerisinde döndürmektedir. Soğutma sistemi ise elektrik enerjisi ile çalışmaktadır. Klimanızın harcamış olduğu her bir Watt elektrik enerjisine karşılık transfer edebildiği ısı enerjisi miktarına klimanızın verimliliği ya da “Performans katsayısı” denir. Avrupa Birliği ülkelerinde yeni uygulamaya giren klima enerji sınıflarına göre, harcanan 1 watt elektrik enerjisi karşılığında 3,2 Watt üzerinde ısı enerjisi taşıyabilen klimalar A enerji seviyesindedir. Aynı kapasiteli klimalar içerisinde en az elektrik tüketen klimalardır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingTen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                                        Klimaların performansı neye bağlıdır?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">
+                                        Klimanın performansı iç ve dış ortam sıcaklıkları, kullanılan mekanın kuzey-güney cephe durumu, izolasyonu, pencere - kapı alanları ve yapısı, duvar kalınlıkları, kat ve çatı durumu gibi ısı kaybı/kazancına direkt etki eden faktörlere bağlıdır. Klimanın belirtilen kapasitesi aşağıdaki koşullarda ölçülen değerlerdir. Soğutma: İç sıcaklık 27°C KT/19°C YT, Dış sıcaklık 35°C KT/24°C YT Isıtma: İç sıcaklık 20°C KT/15°C YT, Dış sıcaklık 7°C KT/6°C YT Dış hava sıcaklığı arttıkça klimanın soğutma performansı düşecektir. Benzer şekilde, dış ortam sıcaklığı azaldıkça ısıtma performansı göreceli olarak azalacaktır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingEleven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                                        Klimanın sağlık açısından bir zararı var mı?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">
+                                        <p style="color: red;">1. Klimanın sağlık açısından bir zararı var mı?</p>
+                                        <p>Klimanız özellikle aşırı ısınmadan dolayı meydana gelebilecek rahatsızlıkları önleyeceğinden sağlık açısından zararlı değildir. Klimanızı kullandığınız ortamda, üflenen havanın direkt karşısında oturmamaya özen gösterin. Klimanızı sürekli en düşük ısı değeri ve en yüksek fan hızında çalıştırmak yerine daha yüksek sıcaklık değerlerinde, orta veya düşük fan hızında çalıştırarak, rüzgar etkisini azaltır ve ortamın aşırı soğumasını engellersiniz.</p>
+                                        <p style="color: red;">2. İnsan sağlığı açısından en uygun ortam şartları nelerdir?</p>
+                                        <p>Kişiden kişiye değişmekle birlikte insan sağlığı için 20–27 derece arası sıcaklık ve %40-60 arası nem genellikle en uygun ortamdır.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item rounded-bottom">
+                                <h2 class="accordion-header" id="flush-headingTwelve">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                                        Yeni Plasma HX
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushSection">
+                                    <div class="accordion-body">Klimada ortam ısısı iç ünite içerisinde bulunan alüminyum fin’ler aracılığıyla sağlanır. 
+                                        Havada bulunan nem, soğutma konumunda çalışan bir klimanın iç ünite fin’leri üzerinde birikir. 
+                                        Oluşan bu birikintiler alüminyum fin’lerin yeterli derecede ısı değişimi gerçekleştirmesini engeller. 
+                                        Bu nedenle klima ortamı soğutabilmek için daha çok çalışır ve enerji tüketimi artar. 
+                                        Yeni Plasma HX sayesinde fin yüzeylerinde su birikintilerinin oluşumu en aza indirgenir.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SSS End -->
+    
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item">
+                            <a href="index.html" class="p-0">
+                                <h4 class="text-white"><i class="fas fa-search-dollar me-3"></i>Stocker</h4>
+                                <!-- <img src="img/logo.png" alt="Logo"> -->
+                            </a>
+                            <p class="mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                            <div class="d-flex">
+                                <a href="#" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
+                                    <i class="fas fa-apple-alt text-white"></i>
+                                    <div class="ms-3">
+                                        <small class="text-white">Download on the</small>
+                                        <h6 class="text-white">App Store</h6>
+                                    </div>
+                                </a>
+                                <a href="#" class="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2">
+                                    <i class="fas fa-play text-primary"></i>
+                                    <div class="ms-3">
+                                        <small class="text-white">Get it on</small>
+                                        <h6 class="text-white">Google Play</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-2">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Attractions</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Tickets</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Support</h4>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Disclaimer</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Help</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">123 Street New York.USA</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <p class="text-white mb-0">info@example.com</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-phone-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">(+012) 3456 7890</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <i class="fab fa-firefox-browser text-primary me-3"></i>
+                                <p class="text-white mb-0">Yoursite@ex.com</p>
+                            </div>
+                            <div class="d-flex">
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <script>
+            // JavaScript ile hover etkisini yönetmek
+            document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+              submenu.addEventListener('mouseover', function() {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+              });
+              submenu.addEventListener('mouseout', function() {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+              });
+            });
+        </script>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace ShopWebUI.Dtos.DealerCategoryDtos
 {
 	public class CreateDealerCategoryDto
 	{
-		public string CategoryName { get; set; }
+        [Required(ErrorMessage = "Kategori adý gereklidir.")]
+        public string CategoryName { get; set; }
 	}
 }

@@ -2,11 +2,11 @@
 
 namespace ShopWebUI.Controllers
 {
-	public class AdminLayoutController : Controller
-	{
-		public IActionResult Index()
-		{
-			return View();
-		}
-	}
+    public class AdminLayoutController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
 }

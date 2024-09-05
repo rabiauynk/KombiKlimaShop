@@ -13,7 +13,9 @@ namespace ShopApi.Mapping
 			CreateMap<Dealer,GetDealerDto>().ReverseMap();
 			CreateMap<Dealer,ResultDealerDto>().ReverseMap();
 			CreateMap<Dealer,UpdateDealerDto>().ReverseMap();
+			CreateMap<Dealer, ResultDealerWithCategory>().ReverseMap();
 
-		}
+
+        }
 	}
 }
