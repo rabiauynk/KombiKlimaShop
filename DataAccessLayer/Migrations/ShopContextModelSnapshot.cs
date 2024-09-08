@@ -115,11 +115,11 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrls")
+                    b.Property<string>("Phone1")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Phone")
+                    b.Property<string>("Phone2")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -147,6 +147,28 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("DealerCategories");
                 });
 
+            modelBuilder.Entity("EntityLayer.Entities.DealerImage", b =>
+                {
+                    b.Property<int>("DealerImageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DealerImageID"));
+
+                    b.Property<int>("DealerID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Index")
+                        .HasColumnType("int");
+
+                    b.HasKey("DealerImageID");
+
+                    b.ToTable("DealerImages");
+                });
+
             modelBuilder.Entity("EntityLayer.Entities.News", b =>
                 {
                     b.Property<int>("NewsID")
@@ -156,10 +178,6 @@ namespace DataAccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NewsID"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageUrls")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -177,6 +195,28 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("NewsID");
 
                     b.ToTable("New");
+                });
+
+            modelBuilder.Entity("EntityLayer.Entities.NewsImage", b =>
+                {
+                    b.Property<int>("NewsImageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NewsImageID"));
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Index")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NewsID")
+                        .HasColumnType("int");
+
+                    b.HasKey("NewsImageID");
+
+                    b.ToTable("NewsImages");
                 });
 
             modelBuilder.Entity("EntityLayer.Entities.Video", b =>

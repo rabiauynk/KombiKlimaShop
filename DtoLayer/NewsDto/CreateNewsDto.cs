@@ -10,7 +10,6 @@ namespace DtoLayer.NewsDto
 	{
 		public string NewTitle { get; set; }
 		public string Description { get; set; }
-		public List<string> ImageUrls { get; set; } 
         public DateTime NewDate { get; set; }
 		public string NewDetail { get; set; }
 		

@@ -14,8 +14,8 @@ namespace EntityLayer.Entities
         public string DealerAddress { get; set; }
         public string DealerDistrict { get; set; }
         public string DealerCity { get; set; }
-		public string Phone { get; set; }
-        public List<string> ImageUrls { get; set; } = new List<string>();
+		public string Phone1 { get; set; } 
+		public string Phone2 { get; set; } 
         public int DealerCategoryID { get; set; }
         public DealerCategory DealerCategory { get; set; }
 

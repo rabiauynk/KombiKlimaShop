@@ -31,12 +31,6 @@ public class DealerController : ControllerBase
     {
         var dealers = _dealerService.TGetListAll();
 
-        // Her bir dealer için null olan ImageUrls kontrolü yapılıyor
-        foreach (var dealer in dealers)
-        {
-            dealer.ImageUrls = dealer.ImageUrls ?? new List<string>();
-        }
-
         var value = _mapper.Map<List<ResultDealerDto>>(dealers);
         return Ok(value);
     }
@@ -54,8 +48,8 @@ public class DealerController : ControllerBase
             DealerCity = y.DealerCity,
             CategoryName = y.DealerCategory.CategoryName,
             DealerDistrict = y.DealerDistrict,
-            ImageUrls = y.ImageUrls,
-            Phone = y.Phone,
+            Phone1 = y.Phone1,
+            Phone2 = y.Phone2
         }).ToList();
         return Ok(values);
     }
@@ -72,7 +66,8 @@ public class DealerController : ControllerBase
                 DealerAddress = createDealerDto.DealerAddress,
                 DealerDistrict = createDealerDto.DealerDistrict,
                 DealerCity = createDealerDto.DealerCity,
-                Phone = createDealerDto.Phone,
+                Phone1 = createDealerDto.Phone1,
+                Phone2 = createDealerDto.Phone2,
                 DealerCategoryID = createDealerDto.DealerCategoryID
             };
 
@@ -84,73 +79,10 @@ public class DealerController : ControllerBase
             return StatusCode(StatusCodes.Status500InternalServerError, $"İşlem başarısız: {ex.Message}");
         }
     }
-    [HttpPost("{id}/upload")]
-    public async Task<IActionResult> Upload(int id, IFormFile file)
-    {
-        if (file == null || file.Length == 0)
-            return BadRequest("Dosya seçilmedi");
-
-        var permittedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
-        var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
-
-        if (string.IsNullOrEmpty(extension) || !permittedExtensions.Contains(extension))
-            return BadRequest("Yalnızca görüntü dosyaları kabul edilir (jpg, jpeg, png, gif).");
-
-        if (string.IsNullOrEmpty(_uiRootPath))
-            return StatusCode(StatusCodes.Status500InternalServerError, "UIRootPath is not configured.");
-
-        if (string.IsNullOrEmpty(file.FileName))
-            return BadRequest("Dosya adı belirtilmedi.");
-
-        var uploadPath = Path.Combine(_uiRootPath, "images");
-
-        if (!Directory.Exists(uploadPath))
-        {
-            Directory.CreateDirectory(uploadPath);
-        }
-
-        var uniqueFileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid().ToString() + extension;
-        var path = Path.Combine(uploadPath, uniqueFileName);
-
-        try
-        {
-            using (var stream = new FileStream(path, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            var dealer = _dealerService.TGetByID(id);
-            if (dealer == null)
-                return NotFound("Firma bulunamadı");
-
-            if (dealer.ImageUrls == null)
-            {
-                dealer.ImageUrls = new List<string>();
-            }
-
-            dealer.ImageUrls.Add(uniqueFileName);
-            _dealerService.TUpdate(dealer);
-
-            return Ok(new { path });
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, $"İşlem başarısız: {ex.Message}");
-        }
-    }
+   
 
 
-
-    [HttpGet("{id}/images")]
-    public IActionResult GetImages(int id)
-    {
-        var dealer = _dealerService.TGetByID(id);
-        if (dealer == null)
-            return NotFound("Firma bulunamadı");
-
-        return Ok(dealer.ImageUrls);
-    }
-
+  
     [HttpDelete("{id}")]
     public IActionResult DeleteDealer(int id)
     {
@@ -184,9 +116,10 @@ public class DealerController : ControllerBase
         dealer.DealerAddress = updateDealerDto.DealerAddress;
         dealer.DealerDistrict = updateDealerDto.DealerDistrict;
         dealer.DealerCity = updateDealerDto.DealerCity;
-        dealer.Phone = updateDealerDto.Phone;
+        dealer.Phone1 = updateDealerDto.Phone1;
+        dealer.Phone2 = updateDealerDto.Phone2;
         dealer.DealerCategoryID = updateDealerDto.DealerCategoryID;
-        dealer.ImageUrls= updateDealerDto.ImageUrls;
+        
         _dealerService.TUpdate(dealer);
         return Ok("Firma Bilgisi Güncellendi");
     }

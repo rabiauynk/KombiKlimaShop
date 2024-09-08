@@ -1,34 +1,46 @@
 ﻿@model List<ShopWebUI.Dtos.NewsDtos.ResultNewsDto>
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Haberler</h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+            <li class="breadcrumb-item active text-primary">Haberler</li>
+        </ol>
+    </div>
+</div>
+<!-- Header End -->
 
-             <!-- Header Start -->
-             <div class="container-fluid bg-breadcrumb">
-                <div class="container text-center py-5" style="max-width: 900px;">
-                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Haberler</h4>
-                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                        <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
-                        <li class="breadcrumb-item active text-primary">Haberler</li>
-                    </ol>    
-                </div>
-            </div>
-            <!-- Header End -->
-<!-- Services Start -->
 <div class="container-fluid service pb-5">
     <div class="container pb-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
         </div>
+
         <div class="row">
             @foreach (var news in Model)
             {
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="service-item">
                         <div class="service-img">
-                            @if (news.ImageUrls != null && news.ImageUrls.Any())
+                            <!-- Haber resimlerini kontrol edelim -->
+                            @if (news.Images != null && news.Images.Any())
                             {
-                                <img src="@news.ImageUrls[0]" class="img-fluid rounded-top w-100" alt="Image">
+                                <!-- İlk resmi alalım (Index'e göre en düşük resim) -->
+                                var firstImage = news.Images.OrderBy(img => img.Index).FirstOrDefault();
+
+                                if ( firstImage != null && !string.IsNullOrEmpty(firstImage.ImageUrl))
+                                { <!-- Resim dosya yolunu doğru şekilde alalım -->
+                                    <img src="~/news-images/@firstImage.ImageUrl" class="img-fluid rounded-top w-100" alt="Image">
+                                }
+                                else
+                                { <!-- Eğer ImageUrl boş veya null ise, varsayılan bir resim gösterelim -->
+                                    <img src="~/news-images/logo2_55139068-4517-4c1e-aed1-7940939d5b5a.png" class="img-fluid rounded-top w-100" alt="Default Image">
+                                }
                             }
                             else
                             {
-                                <img src="path/to/default-image.jpg" class="img-fluid rounded-top w-100" alt="Default Image">
+                                <!-- Eğer resim yoksa, varsayılan bir resim gösterelim -->
+                                <img src="~/news-images/logo2_55139068-4517-4c1e-aed1-7940939d5b5a.png" class="img-fluid rounded-top w-100" alt="Default Image">
                             }
                         </div>
                         <div class="rounded-bottom p-4">
@@ -43,9 +55,8 @@
                 </div>
             }
         </div>
+    </div>
+</div>
 
-                </div>
-            </div>
- 
  
 <!-- Services End -->

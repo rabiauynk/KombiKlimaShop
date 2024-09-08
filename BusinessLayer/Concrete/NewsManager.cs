@@ -34,7 +34,9 @@ namespace BusinessLayer.Concrete
 			return _newsDal.GetByID(id);
 		}
 
-		public List<News> TGetListAll()
+    
+
+        public List<News> TGetListAll()
 		{
 			return _newsDal.GetListAll();
 		}

@@ -1,132 +1,396 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Stocker - Stock Market Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>Stocker - Stock Market Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Spinner End -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
-            <div class="row gx-0 align-items-center">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-flex flex-wrap">
-                        <a href="#" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Haritada Göster</a> 
-                        <a href="mailto:info@kombiklimashop.com" class="text-muted small me-4"><i class="fas fa-envelope text-primary me-2"></i>info@kombiklimashop.com</a>
-                        <a href="tel:+0216 611 99 11" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>0216 611 99 11</a>
-                        <a href="tel:+444 19 87" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>444 19 87</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Üye Ol</small></a>
-                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Üye Girişi</small></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">                
-                    <img src="img/logo-header.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto py-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Anasayfa</a>
-                        </li>
-                        <!-- Dropdown Menu for Kurumsal -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
-                                <span class="dropdown-toggle">Kurumsal</span>
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Hakkımızda </a>
-                                    <ul class="dropdown-menu" style="display: none; position: absolute; left: 100%; top: 0; margin-left: 0.1rem;">
-                                        <li><a class="dropdown-item" href="whoarewe.html">Biz Kimiz?</a></li>
-                                        <li><a class="dropdown-item" href="purchase.html">Satınalmanızı Yapıyoruz</a></li>
-                                        <li><a class="dropdown-item" href="collection.html">7/24 Tahsilat</a></li>
-                                        <li><a class="dropdown-item" href="profit.html">Karlılığınızı Arttırıyoruz</a></li>
-                                        <li><a class="dropdown-item" href="sales.html">Satış Potansiyeli</a></li>
-                                        <li><a class="dropdown-item" href="mobileapp.html">Mobil Uygulama</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="dropdown-item" href="history.html">Tarihçemiz</a></li>
-                                <li><a class="dropdown-item" href="founder.html">Kurucularımız</a></li>
-                                <li><a class="dropdown-item" href="vision.html">Vizyon & Misyonumuz</a></li>
-                                <li><a class="dropdown-item" href="reward.html">Sertifikalar & Ödüller</a></li>
-                                <li><a class="dropdown-item" href="video.html">Tanıtım Videoları</a></li>
-                                <li><a class="dropdown-item" href="https://www.belgemodul.com/sirket/1442">Bilgi Toplumu Hizmetleri</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"> <a href="contact.html" class="nav-link" >İletişim</a> </li>
-                        <li class="nav-item"> <a href="new.html" class="nav-item nav-link">Haberler</a> </li>
-                        <li class="nav-item"> <a href="offer.html" class="nav-item nav-link">Kampanyalar</a></li>
-                        <li class="nav-item"> <a href="dealer.html" class="nav-item nav-link">Bayilerimiz</a></li>
-                        <li class="nav-item"> <a href="sss.html" class="nav-item nav-link">S.S.S.</a></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Ürünleri İncele</a>
-                </div>
-            </nav>
-
-             <!-- Header Start -->
-             <div class="container-fluid bg-breadcrumb">
-                <div class="container text-center py-5" style="max-width: 900px;">
-                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Tarihçemiz</h4>
-                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                        <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
-                        <li class="breadcrumb-item active text-primary">Tarihçemiz</li>
-                    </ol>    
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <a href="#" class="text-muted small me-4"><i
+                            class="fas fa-map-marker-alt text-primary me-2"></i>Haritada Göster</a>
+                    <a href="mailto:info@kombiklimashop.com" class="text-muted small me-4"><i
+                            class="fas fa-envelope text-primary me-2"></i>info@kombiklimashop.com</a>
+                    <a href="tel:+0216 611 99 11" class="text-muted small me-4"><i
+                            class="fas fa-phone-alt text-primary me-2"></i>0216 611 99 11</a>
+                    <a href="tel:+444 19 87" class="text-muted small me-4"><i
+                            class="fas fa-phone-alt text-primary me-2"></i>444 19 87</a>
                 </div>
             </div>
-            <!-- Header End -->
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Üye
+                            Ol</small></a>
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Üye
+                            Girişi</small></a>
+                </div>
+            </div>
         </div>
-        <!-- Navbar & Hero End -->
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="img/logo-header.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto py-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    </li>
+                    <!-- Dropdown Menu for Kurumsal -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Kurumsal</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Hakkımızda </a>
+                                <ul class="dropdown-menu"
+                                    style="display: none; position: absolute; left: 100%; top: 0; margin-left: 0.1rem;">
+                                    <li><a class="dropdown-item" href="whoarewe.html">Biz Kimiz?</a></li>
+                                    <li><a class="dropdown-item" href="purchase.html">Satınalmanızı Yapıyoruz</a></li>
+                                    <li><a class="dropdown-item" href="collection.html">7/24 Tahsilat</a></li>
+                                    <li><a class="dropdown-item" href="profit.html">Karlılığınızı Arttırıyoruz</a></li>
+                                    <li><a class="dropdown-item" href="sales.html">Satış Potansiyeli</a></li>
+                                    <li><a class="dropdown-item" href="mobileapp.html">Mobil Uygulama</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="history.html">Tarihçemiz</a></li>
+                            <li><a class="dropdown-item" href="founder.html">Kurucularımız</a></li>
+                            <li><a class="dropdown-item" href="vision.html">Vizyon & Misyonumuz</a></li>
+                            <li><a class="dropdown-item" href="reward.html">Sertifikalar & Ödüller</a></li>
+                            <li><a class="dropdown-item" href="video.html">Tanıtım Videoları</a></li>
+                            <li><a class="dropdown-item" href="https://www.belgemodul.com/sirket/1442">Bilgi Toplumu
+                                    Hizmetleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> <a href="contact.html" class="nav-link">İletişim</a> </li>
+                    <li class="nav-item"> <a href="new.html" class="nav-item nav-link">Haberler</a> </li>
+                    <li class="nav-item"> <a href="offer.html" class="nav-item nav-link">Kampanyalar</a></li>
+                    <li class="nav-item"> <a href="dealer.html" class="nav-item nav-link">Bayilerimiz</a></li>
+                    <li class="nav-item"> <a href="sss.html" class="nav-item nav-link">S.S.S.</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Ürünleri
+                    İncele</a>
+            </div>
+        </nav>
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Tarihçemiz</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+                    <li class="breadcrumb-item active text-primary">Tarihçemiz</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+    </div>
+    <!-- Navbar & Hero End -->
 
     <!-- Services Start -->
-    <h1>deneme</h1>
+    <div class="container m-5">
+        <table style="width: 100%; border-collapse: collapse; position: relative;">
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2024</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Elazığ Şube & Lojistik Merkezimizi</strong> açtık.</p>
+                    <p>Van Şube & Depomuzu açtık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2023</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Banka Teminat Mektubu</strong> karşılığında Çek ile satışa başladık.</p>
+                    <p>Yeni Nesil Ödeme Sistemleri ile <strong>90 gün</strong> vade imkanı sunduk.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2022</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Alibeyköy Şube & Depomuzu</strong> açtık.</p>
+                    <p>İstanbul içi sevkiyat araçlarımızı <strong>6’ya</strong> çıkardık.</p>
+                    <p>Mal sattığımız Firmaları marka bazında ayrıştırmak için <strong>prim sistemi ve
+                            pazarlama</strong> destekleri vermeye başladık.</p>
+                    <p>Fibabanka Alışveriş Kredisi ile <strong>36 Aya</strong> Varan Vade imkanı sunmaya başladık.</p>
+                    <p><strong>Plastherm, Teka, Ecodense ve Wenta</strong> Bayilikleri aldık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2021</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Metropol İstanbul Genel Müdürlük Ofisimizi</strong> açtık.</p>
+                    <p>Panel radyatörlerde, karşılıklı ölçü toplam <strong>14 metre üstü</strong> siparişlerde
+                        <strong>ücretsiz sevke</strong> başladık.
+                    </p>
+                    <p>Tesisat malzemelerinde <strong>ücretsiz sevke</strong> başladık.</p>
+                    <br>
+                    <p><strong>Vaillant, Rothenberger ve Euroterm </strong> Bayilikleri aldık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <!-- 2020 -->
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2020</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p>Taksit yapılabilen <strong>Tüm Kredi Kartlarına 12 Taksit</strong> yapmaya başladık,</p>
+                    <p>Kombilerde Taahhütçülere Kendi İl'inde Devreye Alımlarına Kampanyalar yapmaya başladık.</p>
+                    <p><strong>LG ve Hoşseven</strong> Toptancı Bayilikleri aldık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <!-- 2019 -->
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2019</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Bosch</strong> ile iş birliğimizi geliştirerek, iş ortaklarımızın karlılığını arttıracak
+                        kampanyalara başladık.</p>
+                    <p>Ekonomik fiyatlı Panel Radyatörler ile <strong>ürün gamımızı genişlettik.</strong></p>
+                    <p>Yeni iş arkadaşları ile ekibimizi güçlendirerek, daha etkin hizmet vermeye başladık.</p>
+                    <p><strong>Protherm, Notarad ve Sanica</strong> Bayilikleri aldık.</p>
+                    <p><strong>Baymak</strong>'tan Dolce Vita Markasının Distribütörlüğünü aldık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <!-- 2018 -->
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2018</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>100.000</strong> adet üzeri yıllık Kombi satışı gerçekleştirerek <strong>%10 Pazar
+                            payına</strong> ulaştık.</p>
+                    <p>Yeni markaları gamımıza katarak <strong>Tesisat Malzemesi</strong> satışına başladık.</p>
+                    <p>Banka Teminat Mektubu ile <strong>15 Gün Açık Hesap</strong> mal satışına başladık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <!-- 2017 -->
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2017</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p>Banka Teminat Mektubu ile <strong>Maktek Bayiliğini</strong> aldık.</p>
+                    <p><strong>Bankalarla güçlü işbirliğimiz</strong> ile DBS (Doğrudan Borçlandırma Sistemi)
+                        çalışmamızı 12 Bankaya çıkardık.</p>
+                    <p>DBS'li müşterilerimize <strong>150 Güne kadar Vade</strong> yapmaya başladık.</p>
+                    <p>Bireysel Kredi Kartlarına ilave <strong>Ticari ve Özel Kredi Kartlarına da %0 Komisyon 9
+                            Taksit</strong> Uygulamaya Başladık.</p>
+                    <p>Maktek Bayiliği aldık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <!-- 2016 -->
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2016</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Ariston</strong>’un en ekonomik Kombisi HS X’in Türkiye Tek Dağıtıcısı olarak satışına
+                        başladık.</p>
+                    <p><strong>“Ücretsiz Sevk”</strong> ile sektörde bir ilke daha imza attık. Kombi, Kaskad, Şofben,
+                        Termosifon, Split Klima ve Kolli birçok üründe aynı gün sevk, 2-5 gün içinde ücretsiz teslimata
+                        başladık.</p>
+                    <p><strong>“Kombide Yeni Dönem başlattık.”</strong> Arçelik ile 7 Model Kombisinin Türkiye Genelinde
+                        Tesisatçı Kanalında dağıtımı için anlaşma yaparak satışına başladık.</p>
+                    <p><strong>Mobil Uygulamamız</strong> ile sektörde bir ilke daha imza attık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <!-- 2015 -->
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2015</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>%0 Komisyon 9 Taksit Uygulaması</strong> ile sektörde bir ilke imza attık.</p>
+                    <p>Türkiye genelinde 200 adet <strong>KOMBI KLIMA SHOP</strong> Konseptli mağaza yapılması
+                        hedeflendi. Türkiye genelinde 6.000 doğalgaz firması ile düzenli iletişime geçildi.</p>
+                    <p><strong>Bosch Termoteknik</strong> Toptancı Bayiliğini aldık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <!-- 2014 -->
+            <tr style="position: relative;">
+                <td
+                    style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2014</td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Immergas</strong> servis güvenceli ALPHA marka Hermetik ve Yoğuşmalı kombi Türkiye tek
+                        dağıtıcılığı alındı.</p>
+                    <p><strong>ALPHA Kombiler</strong>, “Evraksız, Koşulsuz 7 Yıl Garanti” ile pazara sunduk.</p>
+                    <p>Baykan Firması ile <strong>SKY Kombi</strong> modelinin Türkiye Tek Dağıtıcılığı anlaşması yaptık.</p>
+                    <p><strong>TERMODİNAMİK</strong>  Hermetik Şofben ve Elektrikli Kombi toptancı bayiliği aldık.</p>
+                    <p>Türkiye genelinde dağıtım kanalı yapılanması gerçekleştirildi.<strong>1.500</strong> doğalgaz firması ile ticarete başladık.</p>
+                    <p>Türkiye'de 74 adet <strong> KOMBİ KLİMA SHOP</strong> Konseptli bayiler oluşturduk.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2013
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>KOMBI KLIMA SHOP</strong> Konseptli bayi sayımızı <strong>60</strong> adete çıkardık.</p>
+                    <p>IT Altyapısı güçlendirilerek iş ortaklarımıza özel <strong>B2B</strong> Sayfası ile Dijital Francfishing Sistemi vermeye başladık.</p>
+                    <p>İş ortaklarımız kendilerine özel şifre ile online satış ve tahsilat, ödeme, fiyat görme, sipariş verme ve cari ekstra görme gibi <strong>KOMBI KLIMA SHOP</strong> ile ilgili tüm süreçlerini buradan yürütmekte ve takip edebilmekte.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+            
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2012
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p>Koç Grubu ve Arçelik servis güvenceli <strong>ALTUS</strong> marka Kombinin, Daikin servis güvenceli <strong>AUER</strong> marka Kombi ve <strong>IDEAL STELRAD GROUP</strong> Termoteknik Çorlu Tesisleri’nde üretilen <strong>STELRAD</strong> Panel Radyatörlerinin Türkiye Genel Dağıtıcılığını aldık.</p>
+                    <p><strong>Altus</strong> Split Klimalar, <strong>Daxom</strong> Hermetik Şofben, <strong>ECA</strong> Kombi-Hermetik Şofben-Panel Radyatör-Kazan, <strong>Goldtherm</strong> Hermetik Şofben toptancı bayiliklerini aldık.</p>
+                    <p>Türkiye genelinde <strong>KOMBI KLIMA SHOP</strong> Konseptli bayilik yapılanmamızın ilk adımları atılarak 34 adet <strong>KOMBI KLIMA SHOP</strong> Konseptli bayilik verdik.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+            
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2011
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Kombi Klima Shop</strong> Konseptinin yapı taşları olan <strong>ARISTON, IMMERGAS, ARÇELİK SİSTEM KLİMALAR, SANPAN HAVLUPAN</strong> toptancı bayiliklerini aldık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+            
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2010
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>“Tek Noktada Çoklu Çözüm”</strong> ilkesi ile Kombi Klima Shop’un ilk adımı olan Kombi Klima Grup Firması kurduk.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+            
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2009
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p>Yaygın dağıtım kanalı için Türkiye genelinde yapılanmaya gittik. <strong>700’e</strong> yakın satış noktasına ulaştık.</p>
+                    <p>Karlı Ürünleri konumlandırmaya yönelik çalışmaları yaptık.</p>
+                    <p>Pazarda yeni ürün olan yoğuşmalı kombide üstün başarı performansı ile ödüme layık görüldük.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+            
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2008
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p>Taahhütçülere yönelik yaygın dağıtım kanalı çalışmaları yapmaya başladık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+            
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2007
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p>Dağıtım kanalını oluşturmaya yönelik ilk adımları attık.</p>
+                    <p>Risksiz & Karlı & Rekabetçi Fiyat için sektörde nakit ve kredi kartı ile satış konusunda lider rol oynadık.</p>
+                    <hr style="border: 1px solid #0dcaf0;">
+                </td>
+            </tr>
+            
+            <tr style="position: relative;">
+                <td style="width: 15%; text-align: right; font-weight: bold; padding-right: 20px; position: relative; border-right: 2px solid #0dcaf0;">
+                    2006
+                </td>
+                <td style="width: 85%; padding-left: 20px;">
+                    <p><strong>Deniz Kaya & Yeliz Kaya</strong> tarafından Dikey Isı Firmasını kurarak iklimlendirme sektörüne <strong>DemirDöküm</strong> toptancı bayisi olarak başladık.</p>
+                </td>
+            </tr>
+            
+
+        </table>
+
+    </div>
     <!-- Services End -->
 
     <!-- Footer Start -->
@@ -246,12 +510,12 @@
     <script>
         // JavaScript ile hover etkisini yönetmek
         document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
-          submenu.addEventListener('mouseover', function() {
-            this.querySelector('.dropdown-menu').style.display = 'block';
-          });
-          submenu.addEventListener('mouseout', function() {
-            this.querySelector('.dropdown-menu').style.display = 'none';
-          });
+            submenu.addEventListener('mouseover', function () {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+            });
+            submenu.addEventListener('mouseout', function () {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+            });
         });
     </script>
 

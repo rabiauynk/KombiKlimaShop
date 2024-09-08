@@ -16,10 +16,12 @@ namespace DataAccessLayer.Concrete
 		}
 		public DbSet<Campaign> Campaigns { get; set; } 
 		public DbSet<DealerCategory> DealerCategories { get; set; } 
-		public DbSet<Contact> Contacts { get; set; } 
-		public DbSet<Dealer> Dealers { get; set; } 
-		public DbSet<News> New { get; set; } 
-		public DbSet<Video> Videos { get; set; } 
+		public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Dealer> Dealers { get; set; } 
+        public DbSet<DealerImage> DealerImages { get; set; }
+		public DbSet<News> New { get; set; }
+        public DbSet<NewsImage> NewsImages { get; set; }
+        public DbSet<Video> Videos { get; set; } 
 
 	}
 }

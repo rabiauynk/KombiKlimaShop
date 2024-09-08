@@ -33,6 +33,11 @@ builder.Services.AddScoped<INewsDal, EfNewsDal>();
 builder.Services.AddScoped<IVideoService, VideoManager>();
 builder.Services.AddScoped<IVideoDal, EfVideoDal>();
 
+builder.Services.AddScoped<INewsImageService, NewsImageManager>();
+builder.Services.AddScoped<INewsImageDal, EfNewsImageDal>();
+
+builder.Services.AddScoped<IDealerImageService, DealerImageManager>();
+builder.Services.AddScoped<IDealerImageDal, EfDealerImageDal>();
 // Controllers'ý ekle
 builder.Services.AddControllers();
 

@@ -10,5 +10,5 @@ namespace BusinessLayer.Abstract
 	public interface INewsService:IGenericService<News>
 	{
 
-	}
+    }
 }
