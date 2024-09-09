@@ -4,6 +4,8 @@ using DtoLayer.CampaignDto;
 using EntityLayer.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.Linq;
 
 namespace ShopApi.Controllers
 {
@@ -13,32 +15,85 @@ namespace ShopApi.Controllers
 	{
 		private readonly ICampaignService _campaignService;
 		private readonly IMapper _mapper;
+	    private readonly string _uiRootPath;
 
-		public CampaignController(ICampaignService campaignService, IMapper mapper)
-		{
-			_campaignService = campaignService;
-			_mapper = mapper;
-		}
-		[HttpGet]
+        public CampaignController(ICampaignService campaignService, IMapper mapper, IConfiguration configuration)
+        {
+            _campaignService = campaignService;
+            _mapper = mapper;
+            _uiRootPath = configuration["UIRootPath"];
+        
+        }
+
+        [HttpGet]
 		public IActionResult CampaignList()
 		{
 			var value = _mapper.Map<List<ResultCampaignDto>>(_campaignService.TGetListAll());
 			return Ok(value);
 		}
-		[HttpPost]
-		public IActionResult CreateCampaign(CreateCampaignDto createCampaignDto)
-		{
-			_campaignService.TAdd(new Campaign()
-			{
-				CampaignTitle = createCampaignDto.CampaignTitle,
-				Description = createCampaignDto.Description,
-				ImageUrl = createCampaignDto.ImageUrl,
-				CampaignDetail = createCampaignDto.CampaignDetail
+        [HttpPost("add")]
+        public async Task<IActionResult> CreateCampaign(CreateCampaignDto createCampaignDto, IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("Dosya seçilmedi");
 
-			});
-			return Ok("Kampanya Eklendi");
-		}
-		[HttpDelete]
+            var permittedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
+
+            if (string.IsNullOrEmpty(extension) || !permittedExtensions.Contains(extension))
+                return BadRequest("Yalnızca görüntü dosyaları kabul edilir (jpg, jpeg, png, gif).");
+
+            if (string.IsNullOrEmpty(_uiRootPath))
+                return StatusCode(StatusCodes.Status500InternalServerError, "UIRootPath is not configured.");
+
+            var uploadPath = Path.Combine(_uiRootPath, "campaign-images");
+
+            if (!Directory.Exists(uploadPath))
+            {
+                try
+                {
+                    Directory.CreateDirectory(uploadPath);
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, $"Klasör oluşturulamadı: {ex.Message}");
+                }
+            }
+
+            var uniqueFileName = $"{Path.GetFileNameWithoutExtension(file.FileName)}_{Guid.NewGuid()}{extension}";
+            var path = Path.Combine(uploadPath, uniqueFileName);
+
+            try
+            {
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Dosya kaydedilemedi: {ex.Message}");
+            }
+
+            try
+            {
+                _campaignService.TAdd(new Campaign()
+                {
+                    CampaignTitle = createCampaignDto.CampaignTitle,
+                    Description = createCampaignDto.Description,
+                    ImageUrl = uniqueFileName,
+                    CampaignDetail = createCampaignDto.CampaignDetail
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Kampanya eklenemedi: {ex.Message}");
+            }
+
+            return Ok("Kampanya Eklendi");
+        }
+
+        [HttpDelete]
 		public IActionResult DeleteCampaign(int id)
 		{
 			var value = _campaignService.TGetByID(id);
@@ -51,7 +106,62 @@ namespace ShopApi.Controllers
 			var value = _campaignService.TGetByID(id);
 			return Ok(value);
 		}
-		[HttpPut]
+        //[HttpPost("{campaignId}/upload")]
+        //public async Task<IActionResult> UploadCampaignImage(int campaignId, IFormFile file)
+        //{
+        //    if (file == null || file.Length == 0)
+        //        return BadRequest("Dosya seçilmedi");
+
+        //    var permittedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+        //    var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
+
+        //    if (string.IsNullOrEmpty(extension) || !permittedExtensions.Contains(extension))
+        //        return BadRequest("Yalnızca görüntü dosyaları kabul edilir (jpg, jpeg, png, gif).");
+
+        //    if (string.IsNullOrEmpty(_uiRootPath))
+        //        return StatusCode(StatusCodes.Status500InternalServerError, "UIRootPath is not configured.");
+
+        //    var uploadPath = Path.Combine(_uiRootPath, "campaign-images");
+
+        //    if (!Directory.Exists(uploadPath))
+        //    {
+        //        try
+        //        {
+        //            Directory.CreateDirectory(uploadPath);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return StatusCode(StatusCodes.Status500InternalServerError, $"Klasör oluşturulamadı: {ex.Message}");
+        //        }
+        //    }
+
+        //    var uniqueFileName = $"{Path.GetFileNameWithoutExtension(file.FileName)}_{Guid.NewGuid()}{extension}";
+        //    var path = Path.Combine(uploadPath, uniqueFileName);
+
+        //    try
+        //    {
+        //        using (var stream = new FileStream(path, FileMode.Create))
+        //        {
+        //            await file.CopyToAsync(stream);
+        //        }
+
+        //        // Kampanya görselini güncelle
+        //        var campaign = _campaignService.TGetByID(campaignId);
+        //        if (campaign == null)
+        //            return NotFound("Kampanya bulunamadı");
+
+        //        campaign.ImageUrl = uniqueFileName;
+        //        _campaignService.TUpdate(campaign);
+
+        //        return Ok(new { imageUrl = uniqueFileName });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, $"İşlem başarısız: {ex.Message}");
+        //    }
+        //}
+
+        [HttpPut]
 		public IActionResult UpdateCampaign(UpdateCampaignDto updateCampaignDto)
 		{
 			_campaignService.TUpdate(new Campaign()
