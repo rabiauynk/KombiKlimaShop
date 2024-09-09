@@ -10,6 +10,6 @@ namespace ShopWebUI.Dtos.NewsDtos{
      
         public DateTime NewDate { get; set; }
         public string NewDetail { get; set; }
-        public List<ResultDealerImageDto> Images { get; set; }
+        public List<ResultNewsImageDto> Images { get; set; }
     }
 }

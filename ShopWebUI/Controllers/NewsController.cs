@@ -30,15 +30,15 @@ namespace ShopWebUI.Controllers
                     var ImageJsonData = await ImageResponseMessage.Content.ReadAsStringAsync();
                     if (ImageJsonData!= "Resimler bulunamadı")
                     {
-                        var ImageValues = JsonConvert.DeserializeObject<List<ResultDealerImageDto>>(ImageJsonData);
+                        var ImageValues = JsonConvert.DeserializeObject<List<ResultNewsImageDto>>(ImageJsonData);
                         item.Images = ImageValues;
 
                     }
                     else
                     {
-                        item.Images = new List<ResultDealerImageDto>
+                        item.Images = new List<ResultNewsImageDto>
                         {
-                            new ResultDealerImageDto{ImageUrl="logo2_4594337e-9a67-4d71-a491-8006f1ceef06.png",
+                            new ResultNewsImageDto{ImageUrl="logo2_4594337e-9a67-4d71-a491-8006f1ceef06.png",
                             Index=0,
                             NewsID=item.NewsID
                           }

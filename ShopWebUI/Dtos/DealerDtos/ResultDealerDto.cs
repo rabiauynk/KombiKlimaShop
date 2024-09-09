@@ -1,4 +1,6 @@
-﻿namespace ShopWebUI.Dtos.DealerDtos
+﻿using ShopWebUI.Dtos.DealerImageDtos;
+
+namespace ShopWebUI.Dtos.DealerDtos
 {
     public class ResultDealerDto
     {
@@ -8,9 +10,10 @@
         public string DealerAddress { get; set; }
         public string DealerCity { get; set; }
         public string DealerDistrict { get; set; }
-        public string Phone { get; set; }
-        public string ImageUrl { get; set; }
+        public string Phone1 { get; set; }
+        public string Phone2 { get; set; }
         public string CategoryName { get; set; }
+        public List<ResultDealerImageDto> Images { get; set; }
     }
 
 }

@@ -1,6 +1,6 @@
 ﻿namespace ShopWebUI.Dtos.NewsImageDtos
 {
-    public class UpdateDealerImageDto
+    public class UpdateNewsImageDto
     {
         public int NewsImageID { get; set; }
         public string? ImageUrl { get; set; }
