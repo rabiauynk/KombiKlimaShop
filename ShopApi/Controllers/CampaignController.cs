@@ -116,60 +116,7 @@ namespace ShopApi.Controllers
 			var value = _campaignService.TGetByID(id);
 			return Ok(value);
 		}
-        [HttpPost("{campaignId}/upload")]
-        public async Task<IActionResult> UploadCampaignImage(int campaignId, IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-                return BadRequest("Dosya seçilmedi");
-
-            var permittedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
-            var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
-
-            if (string.IsNullOrEmpty(extension) || !permittedExtensions.Contains(extension))
-                return BadRequest("Yalnızca görüntü dosyaları kabul edilir (jpg, jpeg, png, gif).");
-
-            if (string.IsNullOrEmpty(_uiRootPath))
-                return StatusCode(StatusCodes.Status500InternalServerError, "UIRootPath is not configured.");
-
-            var uploadPath = Path.Combine(_uiRootPath, "campaign-images");
-
-            if (!Directory.Exists(uploadPath))
-            {
-                try
-                {
-                    Directory.CreateDirectory(uploadPath);
-                }
-                catch (Exception ex)
-                {
-                    return StatusCode(StatusCodes.Status500InternalServerError, $"Klasör oluşturulamadı: {ex.Message}");
-                }
-            }
-
-            var uniqueFileName = $"{Path.GetFileNameWithoutExtension(file.FileName)}_{Guid.NewGuid()}{extension}";
-            var path = Path.Combine(uploadPath, uniqueFileName);
-
-            try
-            {
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }
-
-                // Kampanya görselini güncelle
-                var campaign = _campaignService.TGetByID(campaignId);
-                if (campaign == null)
-                    return NotFound("Kampanya bulunamadı");
-
-                campaign.ImageUrl = uniqueFileName;
-                _campaignService.TUpdate(campaign);
-
-                return Ok(new { imageUrl = uniqueFileName });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"İşlem başarısız: {ex.Message}");
-            }
-        }
+     
 
         [HttpPut]
 		public IActionResult UpdateCampaign(UpdateCampaignDto updateCampaignDto)
